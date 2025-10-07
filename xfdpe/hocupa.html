@@ -12,41 +12,168 @@
   <meta name="description" content="Reflexión histórica del FDPE sobre ocupaciones, identidad y migración." />
 
   <style>
-    :root{
-      --bg:#ffffff;
-      --fg:#1a1a1a;
-      --muted:#666;
-      --accent:#0a5fff; /* ajusta al color institucional */
-      --card:#f6f8fb;
-      --maxw: 72ch;
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;line-height:1.6}
-    header{padding:2rem 1rem 0}
-    .brand{max-width:var(--maxw);margin:0 auto;color:var(--accent);font-weight:700;letter-spacing:.3px}
-    main{padding:1rem}
-    article{max-width:var(--maxw);margin:0 auto;background:var(--bg)}
-    h1{line-height:1.2;margin:.25rem 0 1rem}
-    h2{line-height:1.25;margin:2rem 0 1rem}
-    p{margin:1rem 0}
-    .lede{font-size:1.125rem;color:var(--fg)}
-    .muted{color:var(--muted)}
-    .figure{margin:1.5rem 0;background:var(--card);padding:1rem;border-radius:.5rem}
-    .figure img{width:100%;height:auto;display:block;border-radius:.35rem}
-    .figure figcaption{font-size:.9rem;color:var(--muted);margin-top:.5rem}
-    ul{margin:1rem 0 1rem 1.25rem}
-    li{margin:.35rem 0}
-    .callout{border-left:4px solid var(--accent);padding:.75rem 1rem;background:var(--card);border-radius:.35rem;margin:1.25rem 0}
-    footer{padding:3rem 1rem 2rem;color:var(--muted)}
-    .container{max-width:var(--maxw);margin:0 auto}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
+
+    header {
+      background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ffd700, #c0c0c0, #cd7f32);
+    }
+
+    .logo-container {
+      margin: 0 auto 1.5rem;
+      max-width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container img {
+      max-width: 100%;
+      height: auto;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2.2rem;
+      letter-spacing: 0.5px;
+      font-weight: 300;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #001f3f, #003366);
+      border-radius: 12px 12px 0 0;
+    }
+
+    h2 {
+      color: #001f3f;
+      margin-top: 0;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #eaeaea;
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 1rem 0;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+
+    li:hover {
+      background-color: #f8f9fa;
+      border-left: 3px solid #003366;
+      transform: translateX(5px);
+    }
+
+    a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: 500;
+      display: block;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #0055aa;
+    }
+
+    .doc-date {
+      display: block;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.25rem;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 2rem;
+      background: #f0f2f5;
+      border-top: 1px solid #eaeaea;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .logo-container {
+        max-width: 150px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="brand container">FDPE · Nota institucional</div>
-    <img src="../img/banner.png" alt="logo" title="logo">
+    <img src="../img/banner.png" alt="logo" title="logo" style="max-width: 75%; height: auto;">
+    <h1>Documentos del FDPE</h1>
+    <p>Frente Democrático de Peruanos en Europa</p>
   </header>
 
   <main>
