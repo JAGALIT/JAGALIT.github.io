@@ -4,89 +4,216 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Documentos FDPE – Frente Democrático de Peruanos en Europa</title>
- <style>
-  body {
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    background: #f4f4f8;
-    color: #222;
-    margin: 0;
-    padding: 0;
-  }
+  <style>
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
 
-  header {
-    background: linear-gradient(120deg, #001f3f, #003366);
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  }
+    header {
+      background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
 
-  header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    letter-spacing: 0.5px;
-  }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ffd700, #c0c0c0, #cd7f32);
+    }
 
-  main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem 2rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
+    .logo-container {
+      margin: 0 auto 1.5rem;
+      max-width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  ul {
-    list-style: none;
-    padding: 0;
-  }
+    .logo-container img {
+      max-width: 100%;
+      height: auto;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s ease;
+    }
 
-  li {
-    margin: 0.6rem 0;
-  }
+    .logo-container img:hover {
+      transform: scale(1.05);
+    }
 
-  a {
-    text-decoration: none;
-    color: #003366;
-    font-weight: 600;
-    transition: all 0.2s;
-  }
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2.2rem;
+      letter-spacing: 0.5px;
+      font-weight: 300;
+    }
 
-  a:hover {
-    color: #0055aa;
-    text-decoration: underline;
-  }
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
 
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 2rem;
-  }
-</style>
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
 
+    main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #001f3f, #003366);
+      border-radius: 12px 12px 0 0;
+    }
+
+    h2 {
+      color: #001f3f;
+      margin-top: 0;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #eaeaea;
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 1rem 0;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+
+    li:hover {
+      background-color: #f8f9fa;
+      border-left: 3px solid #003366;
+      transform: translateX(5px);
+    }
+
+    a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: 500;
+      display: block;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #0055aa;
+    }
+
+    .doc-date {
+      display: block;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.25rem;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 2rem;
+      background: #f0f2f5;
+      border-top: 1px solid #eaeaea;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .logo-container {
+        max-width: 150px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
+    <div class="logo-container">
+      <img src="../img/banner.png" alt="Logo FDPE" title="Frente Democrático de Peruanos en Europa">
+    </div>
     <h1>Documentos del FDPE</h1>
     <p>Frente Democrático de Peruanos en Europa</p>
-            <img src="../img/banner.png" alt="logo" title="logo">
   </header>
 
   <main>
     <h2>Lista de documentos disponibles</h2>
     <ul>
-      <li><a href="tpc.html">La Trilogía del Retorno del Poder, Jagalit, 07 de Octubre 2025</a></li>
-      <li><a href="hocupa.html">La historia demuestra que los pueblos siempre vuelven a ser ellos mismos, Jagalit, Ginebra 11 de Septiembre 2025</a></li>
-      <li><a href="ESUHD.html">Hacia una Escala Salarial Única del Estado Peruano: Justicia, Transparencia y Sostenibilidad, Jagalit, Ginebra, 6 Septiembre 2025</a></li>
-      <li><a href="CdM001.html">Lima, potencia mundial: siempre que tenga infraestructura de última generación, Carlos De Martis, Responsable RR. PP. FDPE, 05 de Septiembre de 2025</a></li>
-      <li><a href="TianjinOCSPyM.html">Tianjin, la soberanía civilizatoria y la ausencia de Perú y México, Jagalit, Ginebra, 02 septiembre 2025</a></li>
-      <li><a href="bsmzproxy.html">Bolívar y San Martín fueron los Zelensky de su época, Jagalit, 24 de agosto de 2025 · Entrevista</a></li>
-      <li><a href="ia.html">La IA no es globalismo, es emancipación personal, Jagalit, 24 de agosto de 2025 · Entrevista</a></li>
-      <li><a href="fdpe_caviar_exposed.html">Dina Boluarte: el puente inesperado para debilitar a la casta caviar, Jagalit, Ginebra, 29 julio 2025</a></li>
-      <li><a href="jymrev.html">¿Mariátegui como escudo cultural de la izquierda? Una reflexión necesaria, Jagalit, Ginebra, 12 junio 2025</a></li>
-      <li><a href="fdpeManif.html">Ni izquierda ni derecha: la verdadera lucha es por recuperar el Perú, Jagalit, Ginebra, 8 junio 2025</a></li>
+      <li>
+        <a href="tpc.html">La Trilogía del Retorno del Poder</a>
+        <span class="doc-date">Jagalit, 07 de Octubre 2025</span>
+      </li>
+      <li>
+        <a href="hocupa.html">La historia demuestra que los pueblos siempre vuelven a ser ellos mismos</a>
+        <span class="doc-date">Jagalit, Ginebra 11 de Septiembre 2025</span>
+      </li>
+      <li>
+        <a href="ESUHD.html">Hacia una Escala Salarial Única del Estado Peruano: Justicia, Transparencia y Sostenibilidad</a>
+        <span class="doc-date">Jagalit, Ginebra, 6 Septiembre 2025</span>
+      </li>
+      <li>
+        <a href="CdM001.html">Lima, potencia mundial: siempre que tenga infraestructura de última generación</a>
+        <span class="doc-date">Carlos De Martis, Responsable RR. PP. FDPE, 05 de Septiembre de 2025</span>
+      </li>
+      <li>
+        <a href="TianjinOCSPyM.html">Tianjin, la soberanía civilizatoria y la ausencia de Perú y México</a>
+        <span class="doc-date">Jagalit, Ginebra, 02 septiembre 2025</span>
+      </li>
+      <li>
+        <a href="bsmzproxy.html">Bolívar y San Martín fueron los Zelensky de su época</a>
+        <span class="doc-date">Jagalit, 24 de agosto de 2025 · Entrevista</span>
+      </li>
+      <li>
+        <a href="ia.html">La IA no es globalismo, es emancipación personal</a>
+        <span class="doc-date">Jagalit, 24 de agosto de 2025 · Entrevista</span>
+      </li>
+      <li>
+        <a href="fdpe_caviar_exposed.html">Dina Boluarte: el puente inesperado para debilitar a la casta caviar</a>
+        <span class="doc-date">Jagalit, Ginebra, 29 julio 2025</span>
+      </li>
+      <li>
+        <a href="jymrev.html">¿Mariátegui como escudo cultural de la izquierda? Una reflexión necesaria</a>
+        <span class="doc-date">Jagalit, Ginebra, 12 junio 2025</span>
+      </li>
+      <li>
+        <a href="fdpeManif.html">Ni izquierda ni derecha: la verdadera lucha es por recuperar el Perú</a>
+        <span class="doc-date">Jagalit, Ginebra, 8 junio 2025</span>
+      </li>
     </ul>
   </main>
 
