@@ -1,0 +1,381 @@
+<style>
+    /* Variables de color */
+    :root {
+        --fp-orange: #F36F21;
+        --rp-blue: #00AEEF;
+        --fdpe-gray: #202020;
+        --fdpe-blue: #0A235A;
+        --critical-red: #B22222;
+        --law-blue: #003366;
+        --evidence-green: #006400;
+        --process-purple: #4B0082;
+        --background-gray: #F5F5F5;
+        --azulmar: #000080;
+        --eu-blue: #003399;
+        --corp-blue: #0055FF;
+        --light-gray: #f8f9fa;
+        --bg:#0b0f16;
+        --card:#111827;
+        --text:#e5e7eb;
+        --muted:#a5b4fc;
+        --soft:#cbd5e1;
+        --accent:#38bdf8;
+        --line:#1f2a44;
+        --quote:#0f172a;
+    }
+
+    /* Estilos generales */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .wrap{
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 18px 80px;
+    }
+
+    body {
+      /*
+        font-family: "Times New Roman", Times, serif;*/
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        font-size: 12pt;
+        line-height: 1.6;
+        color: #333;
+        background-color: white;
+        background: #fff;
+        max-width: 210mm; /* Tamaño A4 */
+        margin: 0 auto;
+        padding: 0;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    body-3 {
+      margin:0;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      background: radial-gradient(1200px 800px at 20% 10%, #0b2a3a 0%, transparent 55%),
+                  radial-gradient(1200px 800px at 80% 20%, #1b2140 0%, transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    body-2 {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #111;
+    }
+
+    main { max-width: 900px; margin: 0 auto; padding: 32px 18px; }
+
+    .center { text-align: center; }
+    /* h2 { margin-top: 1.4em; }*/
+    /* h3 { margin-top: 1.0em; }*/
+    .abstract { background: #f5f5f5; border-left: 6px solid #F36F21; padding: 14px 16px; border-radius: 8px; }
+    .rule { border: none; border-top: 1px solid #ddd; margin: 14px auto; width: 30%; }
+    img { max-width: 100%; height: auto; border-radius: 6px; }
+    figure { margin: 18px 0; }
+    figcaption { font-size: 0.95rem; color: #444; margin-top: 8px; }
+    ul, ol { padding-left: 1.2em; }
+    li { margin: 0.35em 0; }
+
+    /* Contenedor principal con bandas laterales */
+    .main-container {
+        background-color: white;
+        position: relative;
+        padding: 0 20px;
+    }
+
+    .main-container::before,
+    .main-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 6px;
+        background-color: var(--fp-orange);
+    }
+
+    .main-container::before {
+        left: 0;
+    }
+
+    .main-container::after {
+        right: 0;
+    }
+
+    /* Encabezado */
+    header {
+        text-align: center;
+        padding: 20px 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        width: 20%;
+        max-width: 100px;
+        margin-bottom: 10px;
+    }
+
+    h1.title {
+        font-size: 20pt;
+        font-weight: bold;
+        color: var(--fp-orange);
+        margin-bottom: 5px;
+    }
+
+    h2.subtitle {
+        font-size: 14pt;
+        font-weight: bold;
+        color: var(--eu-blue);
+        margin-bottom: 5px;
+    }
+
+    h3.subtitle-2 {
+        font-size: 16pt;
+        font-style: italic;
+        text-align: center;
+        color: var(--fp-orange);
+        margin-bottom: 5px;
+    }
+
+    .evaluation-title {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--criticalred);
+  }
+
+
+    .author-info {
+        text-align: center;
+        font-size: 10pt;
+        margin-bottom: 10px;
+    }
+
+    .signature {
+        text-align: center;
+        font-size: 10pt;
+        margin-bottom: 10px;
+    }
+
+    .separator {
+        width: 20%;
+        height: 2px;
+        background-color: #333;
+        margin: 10px auto;
+    }
+
+    /* Imágenes */
+    .figure-container {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .figure-frame {
+        border: 1px solid #999;
+        padding: 0;
+        display: inline-block;
+        background-color: white;
+        max-width: 95%;
+    }
+
+    .figure-frame img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .figure-caption {
+        font-style: italic;
+        font-size: 10pt;
+        margin-top: 5px;
+        color: #555;
+        text-align: center;
+    }
+
+    /* Abstract */
+    .abstract {
+        background-color: var(--light-gray);
+        padding: 15px;
+        margin: 20px 0;
+        border-left: 4px solid var(--fp-orange);
+        font-style: italic;
+    }
+
+    .abstract-1 { background: #f5f5f5;
+      border-left: 6px solid #F36F21;
+      border-right: 6px solid #F36F21;
+      padding: 14px 16px;
+      border-radius: 8px; }
+
+
+    /* Tabla de contenidos */
+    .toc {
+        margin: 30px 0;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+    }
+
+    .toc h2 {
+        font-size: 14pt;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .toc ul {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+
+    .toc li {
+        margin-bottom: 8px;
+    }
+
+    .toc a {
+        text-decoration: none;
+        color: var(--law-blue);
+    }
+
+    .toc a:hover {
+        text-decoration: underline;
+    }
+
+    /* Secciones */
+    section {
+        margin-bottom: 25px;
+    }
+
+    h1.section-title {
+        font-size: 16pt;
+        font-weight: bold;
+        margin: 25px 0 15px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #ddd;
+    }
+
+    h2.subsection-title {
+        font-size: 14pt;
+        font-weight: bold;
+        margin: 20px 0 10px;
+    }
+
+    h3.subsubsection-title {
+        font-size: 12pt;
+        font-weight: bold;
+        margin: 15px 0 8px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #ddd;
+    }
+
+    h4.subsubsubsection-title {
+        font-size: 11pt;
+        font-weight: bold;
+        font-style: italic;
+        margin: 12px 0 6px;
+    }
+
+    /* Párrafos */
+    p {
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+
+    /* Listas */
+    ul, ol {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    .enumerated-list {
+        list-style-type: decimal;
+        margin-left: 30px;
+    }
+
+    /* Elementos especiales */
+    .critical-point {
+        color: var(--critical-red);
+        font-weight: bold;
+    }
+
+    .highlight-box {
+        background-color: rgba(243, 111, 33, 0.2);
+        border: 1px solid var(--rp-blue);
+        border-radius: 5px;
+        padding: 15px;
+        margin: 20px 0;
+        font-weight: bold;
+        text-align: center;
+        font-style: italic;
+    }
+
+    /* Pie de página */
+    footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        font-size: 10pt;
+        color: #555;
+    }
+
+    .source-link {
+        margin: 20px 0;
+    }
+
+    .source-link a {
+        color: var(--law-blue);
+        word-break: break-all;
+    }
+
+    /* Página de título final */
+    .final-page {
+        text-align: center;
+        margin-top: 60px;
+        padding: 40px 0;
+    }
+
+    .final-page h2 {
+        font-size: 18pt;
+        margin-bottom: 20px;
+    }
+
+    /* Responsive */
+    @media print {
+        body {
+            box-shadow: none;
+        }
+
+        .main-container::before,
+        .main-container::after {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            max-width: 100%;
+            font-size: 11pt;
+        }
+
+        .main-container {
+            padding: 0 10px;
+        }
+
+        h1.title {
+            font-size: 18pt;
+        }
+
+        .logo {
+            width: 30%;
+        }
+    }
+</style>
