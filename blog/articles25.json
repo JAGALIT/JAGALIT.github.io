@@ -1,0 +1,480 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Periodismo Porkista",
+      "link": "https://jagalit.github.io/blog/DA/RLA-DA-19-221225.html",
+      "date": "26 de diciembre 2025",
+      "category": "analisis",
+      "format": "html",
+      "excerpt": "Una crítica al periodismo contemporáneo y sus relaciones con el poder, explorando cómo ciertos medios abandonan la objetividad por intereses particulares.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 2,
+      "title": "La impunidad Narrativa y las Promesas Imposibles",
+      "link": "https://jagalit.github.io/blog/ML/RLA-ML-161225.html",
+      "date": "16 de diciembre 2025",
+      "category": "ensayo",
+      "format": "html",
+      "excerpt": "Reflexión sobre cómo las narrativas políticas construyen realidades paralelas que permiten la impunidad y prometen lo imposible para mantener el poder.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 3,
+      "title": "Las Promesas Imposibles",
+      "link": "../pdfsnov25/RLA-ML-161225vf-Promesas.pdf",
+      "date": "16 de diciembre 2025",
+      "category": "reflexion",
+      "format": "pdf",
+      "excerpt": "Un análisis sobre las promesas políticas irrealizables y su función en el discurso político contemporáneo como herramienta de manipulación.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 4,
+      "title": "La impunidad Narrativa",
+      "link": "../pdfsnov25/RLA-ML-161225vf.pdf",
+      "date": "16 de diciembre 2025",
+      "category": "reflexion",
+      "format": "pdf",
+      "excerpt": "Exploración del concepto de impunidad narrativa en la política peruana y cómo se construyen relatos que justifican lo injustificable.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 5,
+      "title": "RLA presenta propuestas en XVI EXPO-PYME",
+      "link": "../pdfsnov25/RLA-PYMES-021225.pdf",
+      "date": "27 de noviembre 2025",
+      "category": "politica",
+      "format": "pdf",
+      "excerpt": "Cobertura y análisis de las propuestas presentadas por RLA en el evento de pequeñas y medianas empresas, evaluando su viabilidad e impacto.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 6,
+      "title": "Agosto: El Alcalde que Quería Ser Presidente, Noviembre: El Presidente que Solo Quedó en Ser Alcalde",
+      "link": "../pdfsnov25/RLA-THD-261125.pdf",
+      "date": "26 de noviembre 2025",
+      "category": "analisis",
+      "format": "pdf",
+      "excerpt": "Un análisis sobre la transformación de las aspiraciones políticas y cómo los roles cambian según el contexto y las circunstancias del poder.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 7,
+      "title": "RLA presenta propuestas en XVI EXPO PYME",
+      "link": "../pdfsnov25/RLA-PYMES-261125.pdf",
+      "date": "26 de noviembre 2025",
+      "category": "politica",
+      "format": "pdf",
+      "excerpt": "Análisis de las propuestas económicas y empresariales presentadas por RLA en la feria de pequeñas y medianas empresas.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 8,
+      "title": "Carla Moschi entrevista a RLA que presenta su video de plan de Gobierno",
+      "link": "../pdfsnov25/RLA-CM-12-241125-V01.pdf",
+      "date": "25 de noviembre 2025",
+      "category": "entrevista",
+      "format": "pdf",
+      "excerpt": "Entrevista exclusiva donde RLA presenta su plan de gobierno y responde a preguntas sobre su visión para el Perú.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 9,
+      "title": "Claudia Toro entrevista a RLA y sus 100 primeros días de Gobierno",
+      "link": "../pdfsnov25/RLA-CT-231125-V01.pdf",
+      "date": "24 de noviembre 2025",
+      "category": "entrevista",
+      "format": "pdf",
+      "excerpt": "Balance de los primeros 100 días de gobierno hipotético de RLA y sus propuestas de gestión.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 10,
+      "title": "Entrevista a RLA en Arequipa",
+      "link": "../pdfsnov25/RLA-Arequipa-221125.pdf",
+      "date": "24 de noviembre 2025",
+      "category": "entrevista",
+      "format": "pdf",
+      "excerpt": "Entrevista regional donde RLA aborda temas específicos del sur del Perú y su relación con Arequipa.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 11,
+      "title": "Seguridad, Retorno y Desarrollo",
+      "link": "../pdfsnov25/KF-CC-191125-v01.pdf",
+      "date": "22 de noviembre 2025",
+      "category": "politica",
+      "format": "pdf",
+      "excerpt": "Análisis sobre políticas de seguridad ciudadana, retorno de migrantes y desarrollo nacional.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 12,
+      "title": "Energía, Desarrollo y Liderazgo",
+      "link": "../pdfsnov25/KF-RLA-TR-211125.pdf",
+      "date": "21 de noviembre 2025",
+      "category": "politica",
+      "format": "pdf",
+      "excerpt": "Reflexión sobre la relación entre políticas energéticas, desarrollo económico y liderazgo político.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 13,
+      "title": "El expediente RLA",
+      "link": "../pdfsnov25/RLA-131125-v4.pdf",
+      "date": "19 de noviembre 2025",
+      "category": "analisis",
+      "format": "pdf",
+      "excerpt": "Análisis exhaustivo del recorrido político y las propuestas de Rafael López Aliaga.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 14,
+      "title": "Forsyth: símbolo de una élite desconectada del Perú real",
+      "link": "../pdfsnov25/gFrotsyth0811202501.pdf",
+      "date": "08 de noviembre 2025",
+      "category": "critica",
+      "format": "pdf",
+      "excerpt": "Crítica a las élites desconectadas de la realidad peruana y su influencia en la política nacional.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 15,
+      "title": "CADE 2025",
+      "link": "../pdfsnov25/fdpe-tablas-071125.pdf",
+      "date": "07 de noviembre 2025",
+      "category": "economia",
+      "format": "pdf",
+      "excerpt": "Análisis y conclusiones de la Conferencia Anual de Ejecutivos (CADE) 2025 y sus implicaciones políticas.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 16,
+      "title": "Cecilia Chacón, portavoz del fujimorismo institucional",
+      "link": "../pdfsnov25/CCHPeru2131025.pdf",
+      "date": "01 de noviembre 2025",
+      "category": "politica",
+      "format": "pdf",
+      "excerpt": "Perfil y análisis del papel de Cecilia Chacón dentro del espectro político fujimorista.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 17,
+      "title": "Contra el Fanatismo Religioso dentro del FDPE",
+      "link": "../pdfsnov25/ContraFanatismoReligioso-301025.pdf",
+      "date": "31 de octubre 2025",
+      "category": "reflexion",
+      "format": "pdf",
+      "excerpt": "Reflexión crítica sobre los riesgos del fanatismo religioso en la esfera política y partidaria.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 18,
+      "title": "La paradoja política de los gemelos: Una lectura desde la física, la psicología y la política peruana",
+      "link": "../pdfsnov25/AC301025.pdf",
+      "date": "30 de octubre 2025",
+      "category": "ensayo",
+      "format": "pdf",
+      "excerpt": "Ensayo interdisciplinario que analiza fenómenos políticos a través de conceptos científicos y psicológicos.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 19,
+      "title": "Del púlpito al estrado: el peligro de la fe convertida en política",
+      "link": "../pdfsnov25/RLA281025-2.pdf",
+      "date": "29 de octubre 2025",
+      "category": "analisis",
+      "format": "pdf",
+      "excerpt": "Análisis de los riesgos cuando la religiosidad se traslada directamente al discurso y acción política.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 20,
+      "title": "El verdadero enviado de Dios para el Perú está en Roma",
+      "link": "../pdfsnov25/RLA271025.pdf",
+      "date": "27 de octubre 2025",
+      "category": "reflexion",
+      "format": "pdf",
+      "excerpt": "Reflexión sobre liderazgo político y religioso en el contexto peruano contemporáneo.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 21,
+      "title": "Guerra de Tronos: la batalla por el trono peruano",
+      "link": "../pdfsnov25/GameofThrones-221025.pdf",
+      "date": "22 de octubre 2025",
+      "category": "analisis",
+      "format": "pdf",
+      "excerpt": "Análisis metafórico de las luchas de poder en la política peruana utilizando referencias culturales contemporáneas.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 22,
+      "title": "El valor de la perseverancia frente a la adversidad judicial: una lección democrática",
+      "link": "../pdfs/Keiko211025.pdf",
+      "date": "21 de octubre 2025",
+      "category": "politica",
+      "format": "pdf",
+      "excerpt": "Reflexión sobre procesos judiciales y resistencia política en el sistema democrático peruano.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 23,
+      "title": "Retórica religiosa y auto-percepción mesiánica en los discursos de Rafael López Aliaga",
+      "link": "../pdfsnov25/ExpresionesReligiosasRLa211025.pdf",
+      "date": "21 de octubre 2025",
+      "category": "analisis",
+      "format": "pdf",
+      "excerpt": "Análisis discursivo de los elementos religiosos y mesiánicos en la comunicación política de RLA.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 24,
+      "title": "La razón frente a la persecución: defensa de la institucionalidad democrática",
+      "link": "../pdfsnov25/CHCPcontraKF211025.pdf",
+      "date": "21 de octubre 2025",
+      "category": "politica",
+      "format": "pdf",
+      "excerpt": "Defensa de las instituciones democráticas frente a procesos de persecución política.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 25,
+      "title": "Evaluación crítica de la gestión municipal de Rafael López Aliaga (2023–2025)",
+      "link": "../pdfsnov25/rlayacuna121025.pdf",
+      "date": "17 de octubre 2025",
+      "category": "analisis",
+      "format": "pdf",
+      "excerpt": "Balance crítico de la gestión municipal de RLA durante su período en la alcaldía de Lima.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 26,
+      "title": "La paradoja peruana: del caos presidencial a la colegialidad democrática",
+      "link": "https://share.evernote.com/note/cfe3a260-413f-adfc-8358-aea0bba4498d",
+      "date": "12 de octubre 2025",
+      "category": "ensayo",
+      "format": "external",
+      "excerpt": "Ensayo sobre la transición del caos político a sistemas de gobierno más colegiados en el Perú.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 27,
+      "title": "El Perú no sufre una ola espontánea de protestas: vive una operación de desgaste",
+      "link": "https://share.evernote.com/note/378d9cd9-3015-6bc1-9d7f-cbeaa8cad8cc",
+      "date": "08 de octubre 2025",
+      "category": "analisis",
+      "format": "external",
+      "excerpt": "Análisis de las movilizaciones sociales en el Perú y su relación con estrategias de desgaste político.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 28,
+      "title": "La Trilogía del Retorno del Poder",
+      "link": "tpc.html",
+      "date": "07 de octubre 2025",
+      "category": "ensayo",
+      "format": "html",
+      "excerpt": "Ensayo en tres partes sobre los mecanismos de recuperación del poder político en democracias contemporáneas.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 29,
+      "title": "No hace falta llenar las cárceles, hay que vaciar los ministerios de caviares",
+      "link": "../pdfsnov25/Nocarcelmenoscaviares.pdf",
+      "date": "07 de octubre 2025",
+      "category": "critica",
+      "format": "pdf",
+      "excerpt": "Crítica al establishment político peruano y propuesta de renovación de las estructuras estatales.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 30,
+      "title": "El BCR brilla tanto que no deja ver al peruano que tiene el bolsillo vacío",
+      "link": "https://share.evernote.com/note/914dffde-5b70-a860-338e-bf812c1b0508",
+      "date": "04 de octubre 2025",
+      "category": "economia",
+      "format": "external",
+      "excerpt": "Análisis crítico de la política monetaria y su desconexión con la realidad económica de los ciudadanos.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 31,
+      "title": "Cuellos blancos: la etiqueta negra caviar para marcar a los que no controlan",
+      "link": "https://share.evernote.com/note/15a5b654-c361-b69e-8e32-8abcccdd701d",
+      "date": "24 de septiembre 2025",
+      "category": "critica",
+      "format": "external",
+      "excerpt": "Crítica a la estigmatización de profesionales y técnicos en el discurso político peruano.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 32,
+      "title": "Russell Kirk, un extranjero más: Un anti-inmigrante conservador que no entendió América",
+      "link": "https://share.evernote.com/note/38c3eae2-710d-12e4-3870-3f62292f8a16",
+      "date": "23 de septiembre 2025",
+      "category": "ensayo",
+      "format": "external",
+      "excerpt": "Ensayo crítico sobre el pensador conservador Russell Kirk y su visión de la inmigración.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 33,
+      "title": "El sistema de pensiones en debate: entre el populismo y la hipocresía caviar",
+      "link": "https://share.evernote.com/note/8568761b-4297-c2a5-5f93-373a44356224",
+      "date": "21 de septiembre 2025",
+      "category": "economia",
+      "format": "external",
+      "excerpt": "Análisis del debate sobre reforma previsional en el Perú y sus dimensiones políticas.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 34,
+      "title": "El FDPE como Plataforma Jurídica Internacional contra la Red Caviar",
+      "link": "https://share.evernote.com/note/9901324a-f5c4-e57d-02df-d53d868e7637",
+      "date": "21 de septiembre 2025",
+      "category": "politica",
+      "format": "external",
+      "excerpt": "Propuesta del FDPE como mecanismo de lucha contra redes de poder transnacionales.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 35,
+      "title": "La historia demuestra que los pueblos siempre vuelven a ser ellos mismos",
+      "link": "hocupa.html",
+      "date": "11 de septiembre 2025",
+      "category": "reflexion",
+      "format": "html",
+      "excerpt": "Reflexión sobre identidad nacional, continuidad histórica y cambio político.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 36,
+      "title": "Hacia una Escala Salarial Única del Estado Peruano: Justicia, Transparencia y Sostenibilidad",
+      "link": "ESUHD.html",
+      "date": "6 de septiembre 2025",
+      "category": "economia",
+      "format": "html",
+      "excerpt": "Propuesta de reforma salarial en el sector público peruano para mayor equidad y eficiencia.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 37,
+      "title": "Tianjin, la soberanía civilizatoria y la ausencia de Perú y México",
+      "link": "TianjinOCSPyM.html",
+      "date": "2 de septiembre 2025",
+      "category": "internacional",
+      "format": "html",
+      "excerpt": "Análisis geopolítico sobre la participación peruana y mexicana en foros internacionales.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 38,
+      "title": "Bolívar y San Martín fueron los Zelensky de su época",
+      "link": "bsmzproxy.html",
+      "date": "24 de agosto de 2025",
+      "category": "historia",
+      "format": "html",
+      "excerpt": "Ensayo comparativo entre líderes independentistas latinoamericanos y figuras políticas contemporáneas.",
+      "author": "Jagalit",
+      "type": "Entrevista"
+    },
+    {
+      "id": 39,
+      "title": "La IA no es globalismo, es emancipación personal",
+      "link": "ia.html",
+      "date": "24 de agosto de 2025",
+      "category": "tecnologia",
+      "format": "html",
+      "excerpt": "Reflexión sobre inteligencia artificial, soberanía tecnológica y desarrollo personal.",
+      "author": "Jagalit",
+      "type": "Entrevista"
+    },
+    {
+      "id": 40,
+      "title": "Dina Boluarte: el puente inesperado para debilitar a la casta caviar",
+      "link": "fdpe_caviar_exposed.html",
+      "date": "29 de julio 2025",
+      "category": "politica",
+      "format": "html",
+      "excerpt": "Análisis del rol de Dina Boluarte en la reconfiguración del poder político peruano.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 41,
+      "title": "¿Mariátegui como escudo cultural de la izquierda? Una reflexión necesaria",
+      "link": "jymrev.html",
+      "date": "12 de junio 2025",
+      "category": "cultura",
+      "format": "html",
+      "excerpt": "Crítica a la apropiación política de la figura de José Carlos Mariátegui.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 42,
+      "title": "Ni izquierda ni derecha: la verdadera lucha es por recuperar el Perú",
+      "link": "fdpeManif.html",
+      "date": "8 de junio 2025",
+      "category": "politica",
+      "format": "html",
+      "excerpt": "Manifiesto político del FDPE sobre superación de dicotomías ideológicas tradicionales.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 43,
+      "title": "Ya se puede votar desde el extranjero por Internet si tienes DNI electrónico",
+      "link": "https://share.evernote.com/note/84368f02-7578-93db-d1b8-0009097784cd",
+      "date": "31 de mayo 2025",
+      "category": "politica",
+      "format": "external",
+      "excerpt": "Guía y reflexión sobre el voto electrónico para peruanos en el exterior.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 44,
+      "title": "Lopez Chau ex rector UNI",
+      "link": "https://share.evernote.com/note/eff6d604-c455-67fe-00ba-6cb33fb1692b",
+      "date": "29 de abril 2025",
+      "category": "educacion",
+      "format": "external",
+      "excerpt": "Análisis del caso del ex rector de la Universidad Nacional de Ingeniería y sus implicaciones.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 45,
+      "title": "La Voz de los Peruanos en Europa para 2026",
+      "link": "https://share.evernote.com/note/80e121ca-fd19-977e-2a26-0ff952efcc7b",
+      "date": "11 de febrero 2025",
+      "category": "politica",
+      "format": "external",
+      "excerpt": "Propuesta programática y de representación política para la diáspora peruana en Europa.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    },
+    {
+      "id": 46,
+      "title": "Los \"Caviares\": La Élite que Controla el Estado Peruano y Frena su Desarrollo",
+      "link": "https://share.evernote.com/note/fd374eac-b85f-9e7d-1fc6-02c5c06fa1cc",
+      "date": "03 de febrero 2025",
+      "category": "critica",
+      "format": "external",
+      "excerpt": "Análisis crítico de las élites peruanas y su influencia en el desarrollo nacional.",
+      "author": "Jagalit",
+      "location": "Ginebra"
+    }
+  ]
+}

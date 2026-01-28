@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Jagalit - Análisis y reflexión política</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Variables de color y fuentes */
+    :root {
+      --primary-color: #001f3f;
+      --secondary-color: #003366;
+      --accent-color: #ffd700;
+      --light-accent: #c0c0c0;
+      --dark-accent: #cd7f32;
+      --text-color: #333;
+      --light-text: #666;
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --gradient-primary: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+      --gradient-accent: linear-gradient(90deg, #ffd700, #c0c0c0, #cd7f32);
+      --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.08);
+      --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.12);
+      --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.15);
+      --border-radius: 12px;
+      --transition: all 0.3s ease;
+    }
+
+    /* Reset y estilos base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header mejorado */
+    header {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      z-index: 2;
+    }
+
+    /* Efecto de partículas en el header */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.3;
+    }
+
+    .particle {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    /* Contenedor del logo */
+    .logo-container {
+      position: relative;
+      margin: 0 auto 1.5rem;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .logo-circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      animation: pulse 4s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      100% { transform: scale(1.05); opacity: 1; }
+    }
+
+    .logo-container img {
+      max-width: 80%;
+      height: auto;
+      filter: brightness(0) invert(1);
+      transition: var(--transition);
+      z-index: 2;
+      position: relative;
+    }
+
+    .logo-container:hover img {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    /* Títulos del header */
+    .header-title {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      font-weight: 300;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-subtitle {
+      margin: 0;
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Contenido principal */
+    main {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Introducción */
+    .intro-section {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-light);
+      border-left: 5px solid var(--accent-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 1%, transparent 20%);
+      z-index: 0;
+    }
+
+    .intro-section h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Filtros de categoría */
+    .category-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      padding: 0.6rem 1.2rem;
+      background: var(--card-bg);
+      border: 1px solid #e0e0e0;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      color: var(--light-text);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+      background: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+    }
+
+    /* Lista de artículos - Tarjetas modernas */
+    .articles-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .article-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-light);
+      transition: var(--transition);
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .article-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--accent-color);
+      color: var(--primary-color);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      z-index: 2;
+    }
+
+    .article-content {
+      padding: 1.8rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-title {
+      color: var(--primary-color);
+      margin-bottom: 0.8rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.2rem;
+      font-size: 0.85rem;
+      color: var(--light-text);
+    }
+
+    .article-date {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .article-date i {
+      color: var(--accent-color);
+    }
+
+    .article-category {
+      background: #f0f2f5;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+    }
+
+    .article-excerpt {
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+      color: var(--light-text);
+      line-height: 1.5;
+    }
+
+    .article-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--secondary-color);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      transition: var(--transition);
+      align-self: flex-start;
+    }
+
+    .article-link:hover {
+      color: var(--primary-color);
+      gap: 12px;
+    }
+
+    .article-link i {
+      transition: var(--transition);
+    }
+
+    /* Footer mejorado */
+    footer {
+      background: var(--primary-color);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .footer-logo {
+      max-width: 150px;
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+    }
+
+    .footer-text {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--accent-color);
+      color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      opacity: 0.7;
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-title {
+        font-size: 2rem;
+      }
+
+      .header-subtitle {
+        font-size: 1rem;
+      }
+
+      .logo-container {
+        width: 150px;
+        height: 150px;
+      }
+
+      .articles-container {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-section {
+        padding: 1.8rem;
+      }
+
+      main {
+        padding: 0 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-title {
+        font-size: 1.7rem;
+      }
+
+      .category-filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .intro-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Efectos especiales */
+    .glow-effect {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    /* Estilos para animaciones de entrada */
+    .fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .stagger-delay-1 { animation-delay: 0.1s; }
+    .stagger-delay-2 { animation-delay: 0.2s; }
+    .stagger-delay-3 { animation-delay: 0.3s; }
+    .stagger-delay-4 { animation-delay: 0.4s; }
+
+    /* Añade estos estilos a tu CSS existente */
+
+    .format-indicator {
+      margin-left: 8px;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+
+    .category-count {
+      font-size: 0.8em;
+      opacity: 0.8;
+      margin-left: 4px;
+    }
+
+    .article-card[data-category="analisis"] {
+      border-top: 3px solid #3498db;
+    }
+
+    .article-card[data-category="politica"] {
+      border-top: 3px solid #e74c3c;
+    }
+
+    .article-card[data-category="ensayo"] {
+      border-top: 3px solid #9b59b6;
+    }
+
+    .article-card[data-category="reflexion"] {
+      border-top: 3px solid #f39c12;
+    }
+
+    .article-card[data-category="entrevista"] {
+      border-top: 3px solid #2ecc71;
+    }
+
+    .article-card[data-category="critica"] {
+      border-top: 3px solid #e67e22;
+    }
+
+    .article-card[data-category="economia"] {
+      border-top: 3px solid #1abc9c;
+    }
+
+    .article-card[data-category="cultura"] {
+      border-top: 3px solid #d35400;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Header con efectos visuales -->
+  <header>
+    <div class="articles" id="articles-container"></div>
+
+    <div class="logo-container">
+      <div class="logo-circle"></div>
+      <img src="https://jagalit.github.io/img/jagalit.png" alt="Logo de Jagalit" title="Blog de Jagalit">
+    </div>
+
+    <h1 class="header-title">Blog de Jagalit</h1>
+    <p class="header-subtitle">Análisis político, reflexiones y ensayos sobre la realidad peruana e internacional desde una perspectiva crítica y documentada.</p>
+  </header>
+
+  <main>
+    <!-- Sección de introducción -->
+    <section class="intro-section fade-in">
+      <h2><i class="fas fa-feather-alt"></i> Reflexiones Documentadas</h2>
+      <p>Este espacio reúne análisis políticos, ensayos y reflexiones sobre la realidad peruana. Cada artículo parte de una investigación rigurosa y busca ofrecer perspectivas fundamentadas sobre los acontecimientos más relevantes del momento.</p>
+      <div class="glow-effect" style="top: -30px; right: -30px;"></div>
+    </section>
+
+    <!-- Filtros por categoría -->
+    <div class="category-filters fade-in stagger-delay-1">
+      <button class="filter-btn active" data-filter="all">Todos los artículos</button>
+      <button class="filter-btn" data-filter="analisis">Análisis</button>
+      <button class="filter-btn" data-filter="reflexion">Reflexión</button>
+      <button class="filter-btn" data-filter="ensayo">Ensayo</button>
+      <button class="filter-btn" data-filter="politica">Política</button>
+    </div>
+
+    <!-- Artículos en formato de tarjetas -->
+    <div class="articles-container">
+      <!-- Artículo 1 -->
+      <article class="article-card fade-in stagger-delay-2" data-category="analisis">
+        <div class="article-badge">Nuevo</div>
+        <div class="article-content">
+          <h3 class="article-title">Una entrevista que funciona como prueba de estrés</h3>
+          <div class="article-meta">
+            <span class="article-date"><i class="far fa-calendar-alt"></i> 13 de enero 2026</span>
+            <span class="article-category">Análisis</span>
+          </div>
+          <p class="article-excerpt">Un examen detallado de cómo una entrevista puede servir como prueba de estrés para evaluar la solidez de argumentos y la consistencia de posiciones políticas.</p>
+          <a href="https://jagalit.github.io/blog/PB/Analisis_RLA_Butters_Ensayo.html" target="_blank" rel="noopener noreferrer" class="article-link">
+            Leer artículo <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Artículo 2 -->
+      <article class="article-card fade-in stagger-delay-3" data-category="politica">
+        <div class="article-content">
+          <h3 class="article-title">RLA: el otro fantasma de la corrupción caviar</h3>
+          <div class="article-meta">
+            <span class="article-date"><i class="far fa-calendar-alt"></i> 11 de enero 2026</span>
+            <span class="article-category">Política</span>
+          </div>
+          <p class="article-excerpt">Análisis sobre la figura de RLA y su relación con las estructuras de corrupción en el Perú contemporáneo desde una perspectiva crítica.</p>
+          <a href="https://jagalit.github.io/blog/RB/RLA-RB-110126.html" target="_blank" rel="noopener noreferrer" class="article-link">
+            Leer artículo <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Artículo 3 -->
+      <article class="article-card fade-in stagger-delay-2" data-category="analisis">
+        <div class="article-content">
+          <h3 class="article-title">Periodismo Porkista</h3>
+          <div class="article-meta">
+            <span class="article-date"><i class="far fa-calendar-alt"></i> 26 de diciembre 2025</span>
+            <span class="article-category">Análisis</span>
+          </div>
+          <p class="article-excerpt">Una crítica al periodismo contemporáneo y sus relaciones con el poder, explorando cómo ciertos medios abandonan la objetividad por intereses particulares.</p>
+          <a href="https://jagalit.github.io/blog/DA/RLA-DA-19-221225.html" target="_blank" rel="noopener noreferrer" class="article-link">
+            Leer artículo <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Artículo 4 -->
+      <article class="article-card fade-in stagger-delay-3" data-category="ensayo">
+        <div class="article-content">
+          <h3 class="article-title">La impunidad Narrativa y las Promesas Imposibles</h3>
+          <div class="article-meta">
+            <span class="article-date"><i class="far fa-calendar-alt"></i> 16 de diciembre 2025</span>
+            <span class="article-category">Ensayo</span>
+          </div>
+          <p class="article-excerpt">Reflexión sobre cómo las narrativas políticas construyen realidades paralelas que permiten la impunidad y prometen lo imposible para mantener el poder.</p>
+          <a href="https://jagalit.github.io/blog/ML/RLA-ML-161225.html" target="_blank" rel="noopener noreferrer" class="article-link">
+            Leer artículo <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Artículo 5 -->
+      <article class="article-card fade-in stagger-delay-4" data-category="reflexion">
+        <div class="article-content">
+          <h3 class="article-title">Las Promesas Imposibles</h3>
+          <div class="article-meta">
+            <span class="article-date"><i class="far fa-calendar-alt"></i> 16 de diciembre 2025</span>
+            <span class="article-category">Reflexión</span>
+          </div>
+          <p class="article-excerpt">Un análisis sobre las promesas políticas irrealizables y su función en el discurso político contemporáneo como herramienta de manipulación.</p>
+          <a href="../pdfsnov25/RLA-ML-161225vf-Promesas.pdf" target="_blank" rel="noopener noreferrer" class="article-link">
+            Leer artículo <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Artículo 6 -->
+      <article class="article-card fade-in stagger-delay-2" data-category="reflexion">
+        <div class="article-content">
+          <h3 class="article-title">La impunidad Narrativa</h3>
+          <div class="article-meta">
+            <span class="article-date"><i class="far fa-calendar-alt"></i> 16 de diciembre 2025</span>
+            <span class="article-category">Reflexión</span>
+          </div>
+          <p class="article-excerpt">Exploración del concepto de impunidad narrativa en la política peruana y cómo se construyen relatos que justifican lo injustificable.</p>
+          <a href="../pdfsnov25/RLA-ML-161225vf.pdf" target="_blank" rel="noopener noreferrer" class="article-link">
+            Leer artículo <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Artículo 7 -->
+      <article class="article-card fade-in stagger-delay-3" data-category="politica">
+        <div class="article-content">
+          <h3 class="article-title">RLA presenta propuestas en XVI EXPO-PYME</h3>
+          <div class="article-meta">
+            <span class="article-date"><i class="far fa-calendar-alt"></i> 27 de noviembre 2025</span>
+            <span class="article-category">Política</span>
+          </div>
+          <p class="article-excerpt">Cobertura y análisis de las propuestas presentadas por RLA en el evento de pequeñas y medianas empresas, evaluando su viabilidad e impacto.</p>
+          <a href="../pdfsnov25/RLA-PYMES-021225.pdf" target="_blank" rel="noopener noreferrer" class="article-link">
+            Leer artículo <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Artículo 8 -->
+      <article class="article-card fade-in stagger-delay-4" data-category="analisis">
+        <div class="article-content">
+          <h3 class="article-title">Agosto: El Alcalde que Quería Ser Presidente, Noviembre: El Presidente que Solo Quedó en Ser Alcalde</h3>
+          <div class="article-meta">
+            <span class="article-date"><i class="far fa-calendar-alt"></i> 26 de noviembre 2025</span>
+            <span class="article-category">Análisis</span>
+          </div>
+          <p class="article-excerpt">Un análisis sobre la transformación de las aspiraciones políticas y cómo los roles cambian según el contexto y las circunstancias del poder.</p>
+          <a href="../pdfsnov25/RLA-THD-261125.pdf" target="_blank" rel="noopener noreferrer" class="article-link">
+            Leer artículo <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer mejorado -->
+  <footer>
+    <div class="footer-content">
+      <img src="https://jagalit.github.io/img/jagalit.png" alt="Logo Jagait" class="footer-logo">
+
+      <p class="footer-text">
+        Este Blog de jagalit promueve el análisis crítico,
+        la reflexión documentada y el debate informado sobre la realidad peruana desde una perspectiva global.
+      </p>
+
+      <div class="social-links">
+        <a href="https://x.com/jagalit" class="social-link" title="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://facebook.com/jagalit" class="social-link" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://linkedin.com/jagalit" class="social-link" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://youtube.com/jagalit" class="social-link" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="mailto:jagalit@gmail.com" class="social-link" title="Email">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="copyright">
+        © 2025 Jagalit -- Geneva -- Switzerland
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Crear partículas animadas en el header
+    document.addEventListener('DOMContentLoaded', function() {
+      // Crear partículas
+      const particlesContainer = document.getElementById('particles-container');
+      const particleCount = 20;
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        // Tamaño aleatorio
+        const size = Math.random() * 5 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+
+        // Posición aleatoria
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+
+        // Retraso de animación aleatorio
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+
+        // Duración de animación aleatoria
+        particle.style.animationDuration = `${Math.random() * 3 + 4}s`;
+
+        particlesContainer.appendChild(particle);
+      }
+
+      // Filtros de categoría
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const articleCards = document.querySelectorAll('.article-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remover clase active de todos los botones
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+
+          // Agregar clase active al botón clickeado
+          this.classList.add('active');
+
+          const filterValue = this.getAttribute('data-filter');
+
+          // Mostrar/ocultar artículos según el filtro
+          articleCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+              card.style.display = 'flex';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Efecto de escritura en el título (opcional)
+      const title = document.querySelector('.header-title');
+      const originalText = title.textContent;
+      title.textContent = '';
+
+      let i = 0;
+      function typeWriter() {
+        if (i < originalText.length) {
+          title.textContent += originalText.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
+        }
+      }
+
+      // Iniciar efecto de escritura después de 0.5 segundos
+      setTimeout(typeWriter, 500);
+    });
+  </script>
+
+  <!-- Al final del body, después de tu script actual -->
+  <script src="articles25-loader.js"></script>
+  <div class="articles-container" id="articles-container">
+  <!-- Los artículos se cargarán aquí dinámicamente -->
+</div>
+</body>
+</html>

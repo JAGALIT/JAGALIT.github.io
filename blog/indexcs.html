@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Jagalit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="STY/estilosnow.css">
+
+  <!-- Primero intentar cargar el CSS externo -->
+  <link rel="stylesheet" href="STY/estilosblog.css">
+
+  <!-- Si falla, usar CSS inline como respaldo -->
+  <style>
+    /* Aquí copia TODO tu CSS como respaldo */
+    :root {
+      --primary-color: #001f3f;
+      /* ... todo el CSS ... */
+    }
+
+    body {
+      /* ... */
+    }
+
+    /* ... */
+  </style>
+
+
+</head>
+
+<body>
+  <!-- Header con efectos visuales -->
+  <header>
+    <img src="../img/jagalit.png" alt="logo" title="logo" style="max-width: 20%; height: auto;">
+    <h1>Blog de Jagalit</h1>
+  </header>
+  <br>
+
+  <main>
+    <!-- Sección de introducción -->
+    <section class="intro-section fade-in">
+      <h2><i class="fas fa-feather-alt"></i> Reflexiones Documentadas 2026</h2>
+      <p>Este espacio reúne análisis políticos, ensayos y reflexiones sobre la realidad peruana.
+        Cada artículo parte de una investigación rigurosa y busca ofrecer perspectivas fundamentadas
+        sobre los acontecimientos más relevantes del momento.</p>
+      <div class="glow-effect" style="top: -30px; right: -30px;"></div>
+    </section>
+    <ul>
+      <li>
+        <a href="https://jagalit.github.io/blog/PB/Analisis_RLA_Butters_Ensayo.html" target="_blank" rel="noopener noreferrer">
+        Una entrevista que funciona como prueba de estrés</a>
+        <span class="doc-date">Jagalit, 13 de enero 2026</span>
+      </li>
+
+      <li>
+        <a href="https://jagalit.github.io/blog/RB/RLA-RB-110126.html" target="_blank" rel="noopener noreferrer">
+        RLA el otro fantasma de la corrupción caviar</a>
+        <span class="doc-date">Jagalit, 11 de enero 2026</span>
+      </li>
+    </ul>
+    <!-- Sección de introducción -->
+    <section class="intro-section fade-in">
+      <h2><i class="fas fa-feather-alt"></i> Reflexiones Documentadas 2025</h2>
+      <p>Este espacio reúne análisis políticos, ensayos y reflexiones sobre la realidad peruana.</p>
+      <div class="glow-effect" style="top: -30px; right: -30px;"></div>
+    </section>
+
+    <!-- Filtros por categoría -->
+    <div class="category-filters fade-in stagger-delay-1">
+      <button class="filter-btn active" data-filter="all">Todos los artículos</button>
+      <button class="filter-btn" data-filter="analisis">Análisis</button>
+      <button class="filter-btn" data-filter="reflexion">Reflexión</button>
+      <button class="filter-btn" data-filter="ensayo">Ensayo</button>
+      <button class="filter-btn" data-filter="politica">Política</button>
+    </div>
+    <!-- Artículos en formato normal 2026 -->
+
+
+    <!-- Artículos en formato de tarjetas -->
+    <div class="articles25 articles-container" id="articles25">  <!-- Los artículos se cargarán aquí dinámicamente -->
+    </div>
+
+  </main>
+
+  <!-- Footer mejorado -->
+  <footer>
+    © 2026 Jagalit - Geneva -  Switzerland
+  </footer>
+
+  <script>
+    // Crear partículas animadas en el header
+    document.addEventListener('DOMContentLoaded', function() {
+      // Crear partículas
+      const particlesContainer = document.getElementById('particles-container');
+      const particleCount = 20;
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        // Tamaño aleatorio
+        const size = Math.random() * 5 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+
+        // Posición aleatoria
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+
+        // Retraso de animación aleatorio
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+
+        // Duración de animación aleatoria
+        particle.style.animationDuration = `${Math.random() * 3 + 4}s`;
+
+        particlesContainer.appendChild(particle);
+      }
+
+      // Filtros de categoría
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const articleCards = document.querySelectorAll('.article-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remover clase active de todos los botones
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+
+          // Agregar clase active al botón clickeado
+          this.classList.add('active');
+
+          const filterValue = this.getAttribute('data-filter');
+
+          // Mostrar/ocultar artículos según el filtro
+          articleCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+              card.style.display = 'flex';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Efecto de escritura en el título (opcional)
+      const title = document.querySelector('.header-title');
+      const originalText = title.textContent;
+      title.textContent = '';
+
+      let i = 0;
+      function typeWriter() {
+        if (i < originalText.length) {
+          title.textContent += originalText.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
+        }
+      }
+
+      // Iniciar efecto de escritura después de 0.5 segundos
+      setTimeout(typeWriter, 500);
+    });
+  </script>
+
+  <!-- Al final del body, después de tu script actual -->
+  <script src="articles25-loader.js"></script>
+
+</body>
+</html>

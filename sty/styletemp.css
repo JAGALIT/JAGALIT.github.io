@@ -1,0 +1,31 @@
+
+  :root {
+    --bg: #0b0d10;
+    --card: #12161c;
+    --text: #e8edf2;
+    --muted: #a9b4c0;
+    --line: #26303a;
+    --accent: #7bdff2;
+    --accent2: #f7d488;
+  }
+  html, body { background: var(--bg); color: var(--text); margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 28px 18px 60px; }
+  header { padding: 18px 18px 14px; background: linear-gradient(180deg, rgba(123,223,242,0.12), rgba(0,0,0,0)); border: 1px solid var(--line); border-radius: 16px; }
+  h1 { margin: 0; font-size: 30px; letter-spacing: -0.02em; }
+  .sub { color: var(--muted); margin-top: 6px; line-height: 1.4; }
+  .meta { margin-top: 10px; color: var(--muted); font-size: 14px; }
+  nav { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; }
+  nav a { padding: 8px 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 999px; font-size: 14px; }
+  section { margin-top: 18px; padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+  h2 { margin: 0 0 10px; font-size: 20px; }
+  p { margin: 10px 0; line-height: 1.65; }
+  blockquote { margin: 12px 0; padding: 12px 14px; border-left: 3px solid var(--accent); background: rgba(255,255,255,0.03); border-radius: 10px; color: #d9e6f2; }
+  .muted { color: var(--muted); }
+  .kicker { color: var(--accent2); font-weight: 600; font-size: 14px; letter-spacing: .02em; text-transform: uppercase; }
+  .divider { height: 1px; background: var(--line); margin: 14px 0; }
+  details { border: 1px solid var(--line); border-radius: 14px; padding: 12px 12px; background: rgba(255,255,255,0.02); }
+  summary { cursor: pointer; font-weight: 650; }
+  footer { margin-top: 18px; color: var(--muted); font-size: 13px; }
+  

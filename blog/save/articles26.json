@@ -1,0 +1,24 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Una entrevista que funciona como prueba de estrés",
+      "link": "https://jagalit.github.io/blog/PB/Analisis_RLA_Butters_Ensayo.html",
+      "date": "13 de enero 2026",
+      "category": "analisis",
+      "format": "html",
+      "excerpt": "Un examen detallado de cómo una entrevista puede servir como prueba de estrés para evaluar la solidez de argumentos y la consistencia de posiciones políticas.",
+      "author": "Jagalit"
+    },
+    {
+      "id": 2,
+      "title": "RLA: el otro fantasma de la corrupción caviar",
+      "link": "https://jagalit.github.io/blog/RB/RLA-RB-110126.html",
+      "date": "11 de enero 2026",
+      "category": "politica",
+      "format": "html",
+      "excerpt": "Análisis sobre la figura de RLA y su relación con las estructuras de corrupción en el Perú contemporáneo desde una perspectiva crítica.",
+      "author": "Jagalit"
+    }
+  ]
+}

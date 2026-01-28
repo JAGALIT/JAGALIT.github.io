@@ -1,512 +1,175 @@
-<!-- <!meta http-equiv="refresh" content="0; url=/xfdpe/"> -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog de Jagalit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="STY/estilosnow.css">
+
+  <!-- Primero intentar cargar el CSS externo -->
+  <link rel="stylesheet" href="STY/estilosblog.css">
+
+  <!-- Si falla, usar CSS inline como respaldo -->
   <style>
+    /* Aquí copia TODO tu CSS como respaldo */
+    :root {
+      --primary-color: #001f3f;
+      /* ... todo el CSS ... */
+    }
+
     body {
-      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-      /* background: #f8f9fa; */
-      background-color: #1e88e5; /* Fondo azul para demostración */
-      padding: 20px; /* padding: 0; */
-      color: #333;
-      margin: 0;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      position: relative;
-      overflow: hidden;
+      /* ... */
     }
 
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #ffd700, #c0c0c0, #cd7f32);
-    }
-
-    .logo-container {
-      margin: 0 auto 1.5rem;
-      max-width: 200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logo-container img {
-      max-width: 100%;
-      height: auto;
-      filter: brightness(0) invert(1);
-      transition: transform 0.3s ease;
-    }
-
-    .logo-container img:hover {
-      transform: scale(1.05);
-    }
-
-    header h1 {
-      margin: 0 0 0.5rem;
-      font-size: 2.2rem;
-      letter-spacing: 0.5px;
-      font-weight: 300;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 1.1rem;
-      opacity: 0.9;
-      font-weight: 300;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 2.5rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-      position: relative;
-    }
-
-    main::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #001f3f, #003366);
-      border-radius: 12px 12px 0 0;
-    }
-
-    h2 {
-      color: #001f3f;
-      margin-top: 0;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid #eaeaea;
-      font-weight: 400;
-      font-size: 1.5rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      margin: 1rem 0;
-      padding: 1rem 1.25rem;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      border-left: 3px solid transparent;
-    }
-
-    li:hover {
-      background-color: #f8f9fa;
-      border-left: 3px solid #003366;
-      transform: translateX(5px);
-    }
-
-    a {
-      text-decoration: none;
-      color: #003366;
-      font-weight: 500;
-      display: block;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: #0055aa;
-    }
-
-    .doc-date {
-      display: block;
-      font-size: 0.85rem;
-      color: #666;
-      margin-top: 0.25rem;
-      font-style: italic;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 2rem;
-      background: #f0f2f5;
-      border-top: 1px solid #eaeaea;
-    }
-
-    @media (max-width: 768px) {
-      main {
-        margin: 2rem 1rem;
-        padding: 1.5rem;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      .logo-container {
-        max-width: 150px;
-      }
-    }
+    /* ... */
   </style>
+
+
 </head>
 
-  
 <body>
+  <!-- Header con efectos visuales -->
   <header>
     <img src="../img/jagalit.png" alt="logo" title="logo" style="max-width: 20%; height: auto;">
     <h1>Blog de Jagalit</h1>
   </header>
+  <br>
 
   <main>
-    <h2>Blog de Jagalit</h2>
+    <!-- Sección de introducción -->
+    <section class="intro-section fade-in">
+      <h2><i class="fas fa-feather-alt"></i> Reflexiones Documentadas 2026</h2>
+      <p>Este espacio reúne análisis políticos, ensayos y reflexiones sobre la realidad peruana.
+        Cada artículo parte de una investigación rigurosa y busca ofrecer perspectivas fundamentadas
+        sobre los acontecimientos más relevantes del momento.</p>
+      <div class="glow-effect" style="top: -30px; right: -30px;"></div>
+    </section>
     <ul>
-
-
-             <li>
-      <a href="https://jagalit.github.io/blog/PB/Analisis_RLA_Butters_Ensayo.html" target="_blank" rel="noopener noreferrer">
-        Una entrevista que funciona como prueba de estrés
-      </a>
-      <span class="doc-date">Jagalit, 13 de enero 2026</span>
-    </li>
-    
-       <li>
-      <a href="https://jagalit.github.io/blog/RB/RLA-RB-110126.html" target="_blank" rel="noopener noreferrer">
-        RLA el otro fantasma de la corrupción caviar
-      </a>
-      <span class="doc-date">Jagalit, 11 de enero 2026</span>
-    </li>
-      
       <li>
-      <a href="https://jagalit.github.io/blog/DA/RLA-DA-19-221225.html" target="_blank" rel="noopener noreferrer">
-        Periodismo Porkista
-      </a>
-      <span class="doc-date">Jagalit, 26 de Diciembre 2025</span>
-    </li>
-
-        <li>
-      <a href="https://jagalit.github.io/blog/ML/RLA-ML-161225.html" target="_blank" rel="noopener noreferrer">
-        La impunidad Narrativa y las Promesas Imposibles
-      </a>
-      <span class="doc-date">Jagalit, 16 de Diciembre 2025</span>
-    </li>
+        <a href="https://jagalit.github.io/blog/PB/Analisis_RLA_Butters_Ensayo.html" target="_blank" rel="noopener noreferrer">
+        Una entrevista que funciona como prueba de estrés</a>
+        <span class="doc-date">Jagalit, 13 de enero 2026</span>
+      </li>
 
       <li>
-      <a href="../pdfsnov25/RLA-ML-161225vf-Promesas.pdf" target="_blank" rel="noopener noreferrer">
-        Las Promesas Imposibles
-      </a>
-      <span class="doc-date">Jagalit, 16 de Diciembre 2025</span>
-    </li>
-      
-    <li>
-      <a href="../pdfsnov25/RLA-ML-161225vf.pdf" target="_blank" rel="noopener noreferrer">
-        La impunidad Narrativa
-      </a>
-      <span class="doc-date">Jagalit, 16 de Diciembre 2025</span>
-    </li>
-      
-    <li>
-      <a href="../pdfsnov25/RLA-PYMES-021225.pdf" target="_blank" rel="noopener noreferrer">
-        RLA presenta propuestas en XVI EXPO-PYME
-      </a>
-      <span class="doc-date">Jagalit, 27 de Noviembre 2025</span>
-    </li>
+        <a href="https://jagalit.github.io/blog/RB/RLA-RB-110126.html" target="_blank" rel="noopener noreferrer">
+        RLA el otro fantasma de la corrupción caviar</a>
+        <span class="doc-date">Jagalit, 11 de enero 2026</span>
+      </li>
+    </ul>
+    <!-- Sección de introducción -->
+    <section class="intro-section fade-in">
+      <h2><i class="fas fa-feather-alt"></i> Reflexiones Documentadas 2025</h2>
+      <p>Este espacio reúne análisis políticos, ensayos y reflexiones sobre la realidad peruana.</p>
+      <div class="glow-effect" style="top: -30px; right: -30px;"></div>
+    </section>
+
+    <!-- Filtros por categoría -->
+    <div class="category-filters fade-in stagger-delay-1">
+      <button class="filter-btn active" data-filter="all">Todos los artículos</button>
+      <button class="filter-btn" data-filter="analisis">Análisis</button>
+      <button class="filter-btn" data-filter="reflexion">Reflexión</button>
+      <button class="filter-btn" data-filter="ensayo">Ensayo</button>
+      <button class="filter-btn" data-filter="politica">Política</button>
+    </div>
+    <!-- Artículos en formato normal 2026 -->
 
 
-   <li>
-      <a href="../pdfsnov25/RLA-THD-261125.pdf" target="_blank" rel="noopener noreferrer">
-        Agosto: El Alcalde que Quería Ser Presidente, Noviembre: El Presidente que Solo Quedó en Ser Alcalde
-      </a>
-      <span class="doc-date">Jagalit, 26 de Noviembre 2025</span>
-    </li>
-      
-      
-    <li>
-      <a href="../pdfsnov25/RLA-PYMES-261125.pdf" target="_blank" rel="noopener noreferrer">
-        RLA presenta propuestas en XVI EXPO PYME
-      </a>
-      <span class="doc-date">Jagalit, 26 de Noviembre 2025</span>
-    </li>
-      
-    <li>
-      <a href="../pdfsnov25/RLA-CM-12-241125-V01.pdf" target="_blank" rel="noopener noreferrer">
-        Carla Moschi entrevista a RLA que presenta su video de plan de Gobierno
-      </a>
-      <span class="doc-date">Jagalit, 25 de Noviembre 2025</span>
-    </li>
-    
-      <li>
-      <a href="../pdfsnov25/RLA-CT-231125-V01.pdf" target="_blank" rel="noopener noreferrer">
-        Claudia Toro entrevista a RLA y sus 100 primeros días de Gobierno
-      </a>
-      <span class="doc-date">Jagalit, 24 de Noviembre 2025</span>
-    </li>
-      
-    <li>
-      <a href="../pdfsnov25/RLA-Arequipa-221125.pdf" target="_blank" rel="noopener noreferrer">
-        Entrevista a RLA en Arequipa
-      </a>
-      <span class="doc-date">Jagalit, 24 de Noviembre 2025</span>
-    </li>
-      
-    <li>
-      <a href="../pdfsnov25/KF-CC-191125-v01.pdf" target="_blank" rel="noopener noreferrer">
-        Seguridad, Retorno y Desarrollo
-      </a>
-      <span class="doc-date">Jagalit, 22 de Noviembre 2025</span>
-    </li>
-      
-    <li>
-      <a href="../pdfsnov25/KF-RLA-TR-211125.pdf" target="_blank" rel="noopener noreferrer">
-        Energía, Desarrollo y Liderazgo
-      </a>
-      <span class="doc-date">Jagalit, 21 de Noviembre 2025</span>
-    </li>
-      
-    <li>
-      <a href="../pdfsnov25/RLA-131125-v4.pdf" target="_blank" rel="noopener noreferrer">
-        El expediente RLA
-      </a>
-      <span class="doc-date">Jagalit, 19 de Noviembre 2025</span>
-    </li>
-      
-    <li>
-      <a href="../pdfsnov25/gFrotsyth0811202501.pdf" target="_blank" rel="noopener noreferrer">
-        Forsyth: símbolo de una élite desconectada del Perú real
-      </a>
-      <span class="doc-date">Jagalit, 08 de Noviembre 2025</span>
-    </li>
+    <!-- Artículos en formato de tarjetas -->
+    <div class="articles25 articles-container" id="articles25">  <!-- Los artículos se cargarán aquí dinámicamente -->
+    </div>
 
-    <li>
-      <a href="../pdfsnov25/fdpe-tablas-071125.pdf" target="_blank" rel="noopener noreferrer">
-        CADE 2025
-      </a>
-      <span class="doc-date">Jagalit, 07 de Noviembre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/CCHPeru2131025.pdf" target="_blank" rel="noopener noreferrer">
-        Cecilia Chacón, portavoz del fujimorismo institucional
-      </a>
-      <span class="doc-date">Jagalit, 01 de Noviembre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/ContraFanatismoReligioso-301025.pdf" target="_blank" rel="noopener noreferrer">
-        Contra el Fanatismo Religioso dentro del FDPE
-      </a>
-      <span class="doc-date">Jagalit, 31 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/AC301025.pdf" target="_blank" rel="noopener noreferrer">
-        La paradoja política de los gemelos: Una lectura desde la física, la psicología y la política peruana
-      </a>
-      <span class="doc-date">Jagalit, 30 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/RLA281025-2.pdf" target="_blank" rel="noopener noreferrer">
-        Del púlpito al estrado: el peligro de la fe convertida en política
-      </a>
-      <span class="doc-date">Jagalit, 29 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/RLA271025.pdf" target="_blank" rel="noopener noreferrer">
-        El verdadero enviado de Dios para el Perú está en Roma
-      </a>
-      <span class="doc-date">Jagalit, 27 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/GameofThrones-221025.pdf" target="_blank" rel="noopener noreferrer">
-        Guerra de Tronos: la batalla por el trono peruano
-      </a>
-      <span class="doc-date">Jagalit, 22 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfs/Keiko211025.pdf" target="_blank" rel="noopener noreferrer">
-        El valor de la perseverancia frente a la adversidad judicial: una lección democrática
-      </a>
-      <span class="doc-date">Jagalit, 21 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/ExpresionesReligiosasRLa211025.pdf" target="_blank" rel="noopener noreferrer">
-        Retórica religiosa y auto-percepción mesiánica en los discursos de Rafael López Aliaga
-      </a>
-      <span class="doc-date">Jagalit, 21 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/CHCPcontraKF211025.pdf" target="_blank" rel="noopener noreferrer">
-        La razón frente a la persecución: defensa de la institucionalidad democrática
-      </a>
-      <span class="doc-date">Jagalit, 21 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfs/Keiko211025.pdf" target="_blank" rel="noopener noreferrer">
-        El valor de la perseverancia frente a la adversidad judicial: una lección democrática
-      </a>
-      <span class="doc-date">Jagalit, 21 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/rlayacuna121025.pdf" target="_blank" rel="noopener noreferrer">
-        Evaluación crítica de la gestión municipal de Rafael López Aliaga (2023–2025)
-      </a>
-      <span class="doc-date">Jagalit, 17 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="https://share.evernote.com/note/cfe3a260-413f-adfc-8358-aea0bba4498d" target="_blank" rel="noopener noreferrer">
-        La paradoja peruana: del caos presidencial a la colegialidad democrática</a>
-      <span class="doc-date">Jagalit, 12 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="https://share.evernote.com/note/378d9cd9-3015-6bc1-9d7f-cbeaa8cad8cc" target="_blank" rel="noopener noreferrer">
-        El Perú no sufre una ola espontánea de protestas: vive una operación de desgaste</a>
-      <span class="doc-date">Jagalit, 08 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="tpc.html" target="_blank" rel="noopener noreferrer">La Trilogía del Retorno del Poder</a>
-      <span class="doc-date">Jagalit, 07 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="../pdfsnov25/Nocarcelmenoscaviares.pdf" target="_blank" rel="noopener noreferrer">
-        No hace falta llenar las carceles,hay que vaciar los ministerios de caviares
-      </a>
-      <span class="doc-date">Jagalit, 07 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="https://share.evernote.com/note/914dffde-5b70-a860-338e-bf812c1b0508" target="_blank" rel="noopener noreferrer">
-        El BCR brilla tanto que no deja ver al peruano que tiene el bolsillo vacío</a>
-      <span class="doc-date">Jagalit, 04 de Octubre 2025</span>
-    </li>
-
-    <li>
-      <a href="https://share.evernote.com/note/15a5b654-c361-b69e-8e32-8abcccdd701d" target="_blank" rel="noopener noreferrer">
-        Cuellos blancos: la etiqueta negra caviar para marcar a los que no controlan</a>
-      <span class="doc-date">Jagalit, Ginebra 24 de Septiembre 2025</span>
-    </li>
-
-    <li>
-      <a href="https://share.evernote.com/note/38c3eae2-710d-12e4-3870-3f62292f8a16" target="_blank" rel="noopener noreferrer">
-        Russell Kirk, un extranjero más: Un anti-inmigrante conservador que no entendió América</a>
-      <span class="doc-date">Jagalit, Ginebra 23 de Septiembre 2025</span>
-    </li>
-
-    <li>
-      <a href="https://share.evernote.com/note/8568761b-4297-c2a5-5f93-373a44356224" target="_blank" rel="noopener noreferrer">
-        El sistema de pensiones en debate: entre el populismo y la hipocresía caviar</a>
-      <span class="doc-date">Jagalit, Ginebra 21 de Septiembre 2025</span>
-    </li>
-
-    <li>
-      <a href="https://share.evernote.com/note/9901324a-f5c4-e57d-02df-d53d868e7637" target="_blank" rel="noopener noreferrer">
-        El FDPE como Plataforma Jurídica Internacional contra la Red Caviar</a>
-      <span class="doc-date">Jagalit, Ginebra 21 de Septiembre 2025</span>
-    </li>
-
-    <li>
-      <a href="hocupa.html" target="_blank" rel="noopener noreferrer">
-        La historia demuestra que los pueblos siempre vuelven a ser ellos mismos</a>
-      <span class="doc-date">Jagalit, Ginebra 11 de Septiembre 2025</span>
-    </li>
-
-    <li>
-      <a href="ESUHD.html" target="_blank" rel="noopener noreferrer">
-        Hacia una Escala Salarial Única del Estado Peruano: Justicia, Transparencia y Sostenibilidad</a>
-      <span class="doc-date">Jagalit, Ginebra, 6 Septiembre 2025</span>
-    </li>
-
-    <li>
-      <a href="TianjinOCSPyM.html" target="_blank" rel="noopener noreferrer">
-        Tianjin, la soberanía civilizatoria y la ausencia de Perú y México</a>
-      <span class="doc-date">Jagalit, Ginebra, 02 septiembre 2025</span>
-    </li>
-
-    <li>
-      <a href="bsmzproxy.html" target="_blank" rel="noopener noreferrer">
-        Bolívar y San Martín fueron los Zelensky de su época</a>
-      <span class="doc-date">Jagalit, 24 de agosto de 2025 · Entrevista</span>
-    </li>
-
-    <li>
-      <a href="ia.html" target="_blank" rel="noopener noreferrer">
-        La IA no es globalismo, es emancipación personal</a>
-      <span class="doc-date">Jagalit, 24 de agosto de 2025 · Entrevista</span>
-    </li>
-
-    <li>
-      <a href="fdpe_caviar_exposed.html" target="_blank" rel="noopener noreferrer">
-        Dina Boluarte: el puente inesperado para debilitar a la casta caviar</a>
-      <span class="doc-date">Jagalit, Ginebra, 29 julio 2025</span>
-    </li>
-
-    <li>
-      <a href="jymrev.html" target="_blank" rel="noopener noreferrer">
-        ¿Mariátegui como escudo cultural de la izquierda? Una reflexión necesaria</a>
-      <span class="doc-date">Jagalit, Ginebra, 12 junio 2025</span>
-    </li>
-
-    <li>
-      <a href="fdpeManif.html" target="_blank" rel="noopener noreferrer">
-        Ni izquierda ni derecha: la verdadera lucha es por recuperar el Perú</a>
-      <span class="doc-date">Jagalit, Ginebra, 8 junio 2025</span>
-    </li>
-
-    <li>
-      <a href="https://share.evernote.com/note/84368f02-7578-93db-d1b8-0009097784cd" target="_blank" rel="noopener noreferrer">
-        Ya se puede votar desde el extranjero por Internet si tienes DNI electrónico</a>
-      <span class="doc-date">Jagalit, Ginebra, 31 mayo 2025</span>
-    </li>
-
-    <li>
-     <a href="https://share.evernote.com/note/eff6d604-c455-67fe-00ba-6cb33fb1692b" target="_blank" rel="noopener noreferrer">
-       Lopez Chau ex rector UNI</a>
-     <span class="doc-date">Jagalit, Ginebra, 29 Abril 2025</span>
-   </li>
-
-   <li>
-    <a href="https://share.evernote.com/note/80e121ca-fd19-977e-2a26-0ff952efcc7b" target="_blank" rel="noopener noreferrer">
-      La Voz de los Peruanos en Europa para 2026</a>
-    <span class="doc-date">Jagalit, Ginebra, 11 Febrero 2025</span>
-  </li>
-
-   <li>
-    <a href="https://share.evernote.com/note/fd374eac-b85f-9e7d-1fc6-02c5c06fa1cc" target="_blank" rel="noopener noreferrer">
-      Los "Caviares": La Élite que Controla el Estado Peruano y Frena su Desarrollo</a>
-    <span class="doc-date">Jagalit, Ginebra, 03 Febrero 2025</span>
-  </li>
-
-   </ul>
   </main>
 
+  <!-- Footer mejorado -->
   <footer>
     © 2026 Jagalit - Geneva -  Switzerland
   </footer>
+
+  <script>
+    // Crear partículas animadas en el header
+    document.addEventListener('DOMContentLoaded', function() {
+      // Crear partículas
+      const particlesContainer = document.getElementById('particles-container');
+      const particleCount = 20;
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        // Tamaño aleatorio
+        const size = Math.random() * 5 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+
+        // Posición aleatoria
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+
+        // Retraso de animación aleatorio
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+
+        // Duración de animación aleatoria
+        particle.style.animationDuration = `${Math.random() * 3 + 4}s`;
+
+        particlesContainer.appendChild(particle);
+      }
+
+      // Filtros de categoría
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const articleCards = document.querySelectorAll('.article-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remover clase active de todos los botones
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+
+          // Agregar clase active al botón clickeado
+          this.classList.add('active');
+
+          const filterValue = this.getAttribute('data-filter');
+
+          // Mostrar/ocultar artículos según el filtro
+          articleCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+              card.style.display = 'flex';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Efecto de escritura en el título (opcional)
+      const title = document.querySelector('.header-title');
+      const originalText = title.textContent;
+      title.textContent = '';
+
+      let i = 0;
+      function typeWriter() {
+        if (i < originalText.length) {
+          title.textContent += originalText.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
+        }
+      }
+
+      // Iniciar efecto de escritura después de 0.5 segundos
+      setTimeout(typeWriter, 500);
+    });
+  </script>
+
+  <!-- Al final del body, después de tu script actual -->
+  <script src="articles25-loader.js"></script>
+
 </body>
 </html>
-
-
