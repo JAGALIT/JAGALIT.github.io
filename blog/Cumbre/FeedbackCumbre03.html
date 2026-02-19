@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversación sobre la universidad peruana · José Gálvez</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Palatino', 'Palatino Linotype', 'Georgia', serif;
+            background-color: #fafafa;
+            color: #1e2a3a;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Encabezados elegantes */
+        h1, h2, h3 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            color: #0b2a41;
+            margin-top: 2.2rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid rgba(11, 42, 65, 0.15);
+            padding-bottom: 0.4rem;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            border-bottom: 2px solid #a77b4d;
+            padding-bottom: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            border-bottom: none;
+            font-weight: 600;
+            color: #a77b4d;
+            margin-top: 1.8rem;
+        }
+
+        /* Estilo de citas / conversación */
+        .conversation-block {
+            margin: 2rem 0;
+        }
+
+        .speaker {
+            font-weight: 600;
+            color: #0b2a41;
+            margin-top: 1.2rem;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .speaker.lima {
+            border-left: 4px solid #a77b4d;
+            padding-left: 1rem;
+        }
+
+        .speaker.provincia {
+            border-left: 4px solid #4d6a8f;
+            padding-left: 1rem;
+        }
+
+        .speaker.interlocutor {
+            border-left: 4px solid #2c5f2d;
+            padding-left: 1rem;
+        }
+
+        .dialogue {
+            margin-bottom: 1.2rem;
+            font-style: normal;
+            background-color: #ffffff;
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        /* Bloques de reflexión */
+        .reflexion-block {
+            background-color: #f5f3f0;
+            border-left: 6px solid #a77b4d;
+            padding: 1.8rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 12px 12px 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .glossary {
+            background-color: #ffffff;
+            border: 1px solid #e0dcd5;
+            padding: 1.8rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+            margin: 2.5rem 0;
+        }
+
+        .glossary h3 {
+            margin-top: 0;
+            border-bottom: none;
+            color: #0b2a41;
+        }
+
+        .glossary ul {
+            columns: 2;
+            column-gap: 2.5rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .glossary li {
+            margin-bottom: 0.8rem;
+            break-inside: avoid;
+            font-size: 0.98rem;
+        }
+
+        .glossary strong {
+            color: #a77b4d;
+            font-weight: 600;
+            display: inline-block;
+            min-width: 85px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(167,123,77,0.1) 0%, rgba(167,123,77,0.1) 100%);
+            font-weight: 500;
+            padding: 0.1rem 0.3rem;
+        }
+
+        .note {
+            background-color: #eef3f7;
+            border-radius: 12px;
+            padding: 1.2rem 1.8rem;
+            font-size: 0.98rem;
+            border-left: 4px solid #4d6a8f;
+            margin: 1.8rem 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #d8d2c5;
+            margin: 3rem 0;
+        }
+
+        .author-section {
+            background: linear-gradient(165deg, #ffffff 0%, #f9f7f4 100%);
+            border-radius: 24px;
+            padding: 2.2rem 2.5rem;
+            margin-top: 4rem;
+            border: 1px solid #e5ddd2;
+            box-shadow: 0 12px 28px -8px rgba(0,20,30,0.15);
+        }
+
+        .author-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .author-logo {
+            flex: 0 0 160px;
+            text-align: center;
+        }
+
+        .author-logo img {
+            max-width: 160px;
+            max-height: 160px;
+            border-radius: 50%;
+            border: 3px solid #a77b4d;
+            padding: 5px;
+            background: white;
+        }
+
+        .author-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .author-name {
+            font-size: 2rem;
+            font-family: 'Georgia', serif;
+            color: #0b2a41;
+            margin-bottom: 0.3rem;
+            line-height: 1.2;
+        }
+
+        .author-tagline {
+            font-size: 1.1rem;
+            color: #a77b4d;
+            border-bottom: 1px solid #a77b4d40;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.02em;
+        }
+
+        .author-bio {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .call-to-action {
+            background-color: #0b2a41;
+            color: white;
+            padding: 2.2rem 2.5rem;
+            border-radius: 24px;
+            margin: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .call-to-action h3 {
+            color: #f5e1c4;
+            border-bottom: none;
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .call-to-action p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1.2rem auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #a77b4d;
+            color: white;
+            border: none;
+            padding: 1rem 2.8rem;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Georgia', serif;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            border: 1px solid #a77b4d;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: #a77b4d;
+            border: 1px solid #a77b4d;
+            cursor: default; /* Simulado, enlace real tendría pointer */
+        }
+
+        /* Footer elegante */
+        .footer {
+            text-align: center;
+            color: #7b8c9e;
+            font-size: 0.9rem;
+            margin-top: 3.5rem;
+            border-top: 1px dashed #d0c8bc;
+            padding-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            body { font-size: 1rem; }
+            h1 { font-size: 2rem; }
+            .glossary ul { columns: 1; }
+        }
+
+        /* Pequeños detalles */
+        .quote-mark {
+            font-size: 3rem;
+            color: #a77b4d30;
+            font-family: serif;
+            line-height: 0;
+            position: relative;
+            top: 1rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Título principal -->
+        <h1>📌 Conversación sobre la universidad peruana hoy: capital vs. provincia</h1>
+        <p style="font-size: 1.15rem; color: #3a4e62; margin-top: -0.5rem;">Un diálogo que revela la fragmentación del sistema universitario y la urgencia de una nueva arquitectura científica.</p>
+
+        <div class="figure-container">
+          <div class="figure-frame">
+            <img src="cumbre.png" width="100%" height="auto" alt="Sin Ciencia no hay Desarrollo"/>
+          </div>
+          <p class="figure-caption">Caricatura editorial sobre el periodismo porkista.</p>
+        </div>
+        <!-- Contexto -->
+        <div style="margin: 2rem 0 1rem;">
+            <p><strong>Contexto:</strong> Dos conversaciones con dos académicos peruanos. Uno trabaja en una universidad pública de Lima (la más emblemática del país). El otro, en una universidad pública de provincia (Trujillo). Sus perspectivas, aunque distintas, revelan la complejidad y heterogeneidad del sistema universitario peruano en 2026.</p>
+        </div>
+
+        <!-- Introducción: La Cumbre -->
+        <h2>🔎 Introducción: La Cumbre como punto de partida</h2>
+        <p>Esta conversación nace a partir del envío de un documento preliminar por el interlocutor sobre la
+       <strong><a href="https://anyflip.com/hnapd/jwha/" target="_blank" style="text-decoration: none; color: inherit; border-bottom: 1px dotted #a77b4d;">Cumbre Iberoamericana sobre Ciencia, Universidad y Desarrollo Nacional</a></strong>. La intención inicial era recoger comentarios sobre la viabilidad del evento. Lo que surgió fue algo inesperado: un contraste frontal de percepciones sobre el estado real de la universidad peruana.</p>
+
+        <p>La Cumbre no está pensada como un congreso científico tradicional ni como una sucesión de ponencias técnicas. Tampoco busca sumar un evento más al calendario académico. Su propósito es más profundo: abrir un espacio comparativo y humano donde académicos iberoamericanos compartan cómo viven y trabajan, qué condiciones institucionales tienen, cómo construyen escuelas científicas sólidas y qué tipo de arquitectura estatal sostiene su labor.</p>
+        <p>La propuesta parte de una convicción clara: el Perú no carece de talento. Cuenta con investigadores dentro y fuera del país, con jóvenes doctores formados en el extranjero y con una diáspora académica activa. Sin embargo, falta una política científica nacional coherente, con conducción estratégica y articulación institucional que transforme esfuerzos individuales en capacidad país.</p>
+        <p><strong>Ejes centrales de la Cumbre:</strong></p>
+        <ul>
+            <li><strong>Arquitectura científica:</strong> ¿Existe en el Perú un sistema nacional articulado o solo actividad dispersa?</li>
+            <li><strong>Construcción de escuela:</strong> Más allá de salarios o eventos, ¿estamos consolidando grupos sólidos con masa crítica y continuidad generacional?</li>
+            <li><strong>Conexión con la diáspora (PEX):</strong> ¿Cómo integrar estructuralmente a los investigadores peruanos en el exterior sin depender exclusivamente de su repatriación?</li>
+        </ul>
+        <p>Al compartir este documento con colegas de distintas regiones del país, surgió un intercambio particularmente revelador con un profesor de una universidad pública de Lima y otro de provincia. El diálogo mostró que las percepciones sobre la universidad peruana actual pueden variar considerablemente entre capital y regiones.</p>
+
+        <!-- Conversación -->
+        <h2>💬 La conversación</h2>
+
+        <div class="conversation-block">
+            <div class="speaker provincia">Colega en provincia (Trujillo):</div>
+            <div class="dialogue">
+                <p>Bueno, en primer lugar, debo decirte que la situación ahora no es la de los años 80-90. Con la nueva ley universitaria, hay una fiebre por la actividad científica. Todo el mundo quiere investigar y busca formas de participar en grupos de investigación. La gente organiza febrilmente eventos como congresos, conferencias, workshops, talleres.</p>
+                <p>Hoy los profesores no ganamos mal para los estándares de Perú. Un principal recibe 9 mil soles, casi 3 mil dólares. Y si trabajan en 2 o 3 universidades, pues la gente lo que quiere es ganar más dinero y deshecha todo lo demás.</p>
+            </div>
+
+            <div class="speaker interlocutor">Interlocutor (Suiza):</div>
+            <div class="dialogue">
+                <p>Bueno, lo que me comentas me sorprende porque en Lima la realidad no siempre es la misma. He visto docentes trabajar en dos universidades, sin infraestructura adecuada y con una carga académica elevada. Trabajan incluso siendo muy mayores porque de otro modo sus salarios se reducen al mínimo. Comen menús de 13 soles, no tienen un auto para ir al trabajo, no tienen oficinas para trabajar, no tienen ninguna capacitación y, para colmo, se les obliga a una evaluación periódica exigente cada cinco años y si no estás en la argolla, chau. La percepción en la capital puede ser distinta.</p>
+                <p>Entonces mi pregunta es: ¿hasta dónde es cierto lo que me han dicho? Porque tengo un recuerdo de los 80 de cómo era la universidad y por eso notaba que nada había cambiado, porque no veía una política de investigación científica nacional clara y coherente.</p>
+            </div>
+
+            <div class="speaker provincia">Colega en provincia:</div>
+            <div class="dialogue">
+                <p>En mi universidad, creo que soy el único con un carrito sedán viejito. Todos los principales tienen camionetas nuevas 4x4.</p>
+            </div>
+
+            <div class="speaker interlocutor">Interlocutor (Suiza):</div>
+            <div class="dialogue">
+                <p>Eso no lo sabía. Y me alegra si es así. La última vez que fui a Perú, a San Marcos, tuve una impresión que ahora veo equivocada.</p>
+            </div>
+
+            <div class="speaker provincia">Colega en provincia:</div>
+            <div class="dialogue">
+                <p>Ahora hay un frenesí de actividades. Todos invitan a sus coautores del extranjero y organizan workshops. La gente no alcanza a ir a todo.</p>
+            </div>
+
+            <div class="speaker interlocutor">Interlocutor:</div>
+            <div class="dialogue">
+                <p>De verdad me sorprendes. Tenía una narrativa de la universidad de mis colegas de San Marcos totalmente distinta.</p>
+            </div>
+
+            <div class="speaker provincia">Colega en provincia:</div>
+            <div class="dialogue">
+                <p>Lo que falta es que haya menos burocracia en CONCYTEC y SUNEDU. Y que los que trabajan ahí sean profesionales que entienden de investigación. Porque la mayoría de sus funcionarios son jóvenes, bachilleres recién salidos, que no saben ni dónde están parados.</p>
+                <p>Una propuesta llamativa sería reorganizar el sistema de investigación y desarrollar una política de incentivos para promover la repatriación de científicos.</p>
+            </div>
+
+            <div class="speaker interlocutor">Interlocutor:</div>
+            <div class="dialogue">
+                <p>Pues esa es justamente la misión de un verdadero centro de I+D. El Perú no tiene una política científica nacional coherente con conducción política al más alto nivel. En Perú no falta el ladrillo, falta el plano arquitectónico.</p>
+            </div>
+
+            <div class="speaker provincia">Colega en provincia:</div>
+            <div class="dialogue">
+                <p>Es verdad. Y desarrollar una política de incentivos para promover la repatriación de científicos. Mucho más si tus votantes son los que viven en el extranjero.</p>
+            </div>
+
+            <div class="speaker interlocutor">Interlocutor:</div>
+            <div class="dialogue">
+                <p>Con un centro, lo esencial es <span class="highlight">hacer escuela</span>. Repatriar no es necesario; si la gente viene, bienvenidos. Lo más importante con los que están fuera es la conexión, y eso sí hay que facilitarlo, consolidar grupos sólidos, con masa crítica, continuidad y conexión internacional estructurada.</p>
+            </div>
+
+            <div class="speaker provincia">Colega en provincia:</div>
+            <div class="dialogue">
+                <p>Es verdad. Hoy el trabajo de los que estamos acá es como coautores en grupos de investigación del extranjero. Pero también hay cientos, sino miles, de jóvenes con PhD que están fuera, sólo con postdocs. Nada seguro para ellos. A esos habría que promover su retorno.</p>
+            </div>
+
+            <div class="speaker interlocutor">Interlocutor:</div>
+            <div class="dialogue">
+                <p>La conexión con la diáspora científica debe facilitarse institucionalmente. El talento que está fuera puede colaborar activamente sin necesidad de retorno obligatorio.</p>
+                <p>Un centro articulador, conectado con universidades y centros tecnológicos, permitiría consolidar escuelas interdisciplinarias. Incluso un estudio profundo sobre nuestros orígenes —desde arqueología y genética hasta física y cómputo avanzado— requiere una arquitectura científica integrada.</p>
+                <p>La idea de una cumbre sería convocar académicos latinoamericanos para dialogar no solo sobre ciencia, sino sobre sus trayectorias, condiciones laborales, carga académica, apoyo institucional y políticas públicas. Humanizar la discusión puede ser más revelador que cualquier congreso técnico.</p>
+            </div>
+        </div>
+
+        <!-- Reflexiones -->
+        <h2>🔍 Reflexiones que surgen</h2>
+        <ul>
+            <li><strong>Heterogeneidad estructural:</strong> Existen realidades distintas entre capital y provincias, entre categorías docentes y entre facultades. Esto revela fragmentación del sistema.</li>
+            <li><strong>Actividad vs. estrategia:</strong> Hay más producción y eventos académicos que décadas atrás, pero aún falta articulación nacional por áreas estratégicas.</li>
+            <li><strong>Gobernanza científica:</strong> Se requiere conducción política clara y profesionalización de la gestión científica.</li>
+            <li><strong>Diáspora científica:</strong> Más que repatriación obligatoria, se necesita conexión institucional estable y programas colaborativos.</li>
+            <li><strong>Construcción de escuela:</strong> La clave del desarrollo científico es consolidar grupos sólidos con continuidad generacional.</li>
+            <li><strong>Cumbre humana:</strong> Escuchar experiencias de vida académica puede abrir un debate más honesto sobre el futuro del sistema.</li>
+        </ul>
+
+        <hr>
+
+        <!-- Mirada del docente latinoamericano (añadido) -->
+        <div class="reflexion-block">
+            <h2 style="margin-top: 0; border-bottom: none;">🧑‍🏫 Mirada de un docente latinoamericano</h2>
+            <p><em>A continuación, la reflexión de un colega de la región que ha leído este documento con atención. No pretende ser una respuesta definitiva, sino una contribución más al debate que aquí se abre.</em></p>
+
+            <h3>Lo que más me gusta de esta conversación</h3>
+            <ul>
+                <li><strong>La honestidad del contraste.</strong> No se esconde que hay realidades opuestas. El colega en provincia dice: "Ganamos 9,000 soles, hay camionetas 4x4". El interlocutor responde: "En Lima veo profesores comiendo menú de 13 soles, sin auto, pluriempleados". Eso es valiosísimo porque rompe con la narrativa única. La universidad peruana no es una: es muchas, y a veces coexisten en el mismo país sin tocarse.</li>
+                <li><strong>La centralidad de la "argolla".</strong> Aparece de refilón, pero es el elefante en la habitación. El interlocutor lo dice claro: "Si no estás en la argolla, chau". Y el colega en provincia, sin usar esa palabra, confirma que él es de la argolla (por eso tiene camioneta, por eso organiza workshops). Ponerlo sobre la mesa es valiente.</li>
+                <li><strong>La propuesta de la Cumbre humana.</strong> No es un congreso más. Es un espacio para escuchar <em>cómo se vive</em> la academia, no solo qué se publica. Carga horaria, apoyos, viajes, condiciones laborales... eso es lo que realmente determina si un sistema científico puede florecer.</li>
+                <li><strong>El énfasis en "hacer escuela" por encima de "repatriar".</strong> El interlocutor lo dice con claridad: "Lo esencial es hacer escuela. Repatriar no es necesario; si la gente viene, bienvenidos. Lo más importante es la conexión". Primero la casa, luego los habitantes.</li>
+                <li><strong>La investigación sobre los orígenes como proyecto movilizador.</strong> Es una idea hermosa. Investigar quiénes somos, de dónde venimos, nuestro legado. Y hacerlo con física, genética, arqueología, computación. Eso sí puede unir disciplinas y dar sentido profundo a la ciencia.</li>
+            </ul>
+
+            <h3>Preguntas que me surgen como lector</h3>
+            <ul>
+                <li><strong>¿Quién es el interlocutor?</strong> En el documento aparece como "Interlocutor (Suiza)". Para un lector externo, puede quedar la duda de si es un académico peruano en el extranjero, un extranjero interesado en Perú, o alguien con otro perfil. Aclararlo un poco (sin necesidad de nombres) ayudaría a situar su mirada.</li>
+                <li><strong>¿Qué peso tienen estas realidades?</strong> El colega en provincia dice: "Un principal recibe 9 mil soles". El interlocutor responde con testimonios de precariedad. ¿Cuántos principales hay en el Perú? ¿Qué porcentaje está en cada realidad? Una nota con datos generales (como el sueldo base según decreto) daría más contexto.</li>
+                <li><strong>¿Dónde están los jóvenes?</strong> La conversación habla de profesores principales y de jóvenes PhD en el extranjero. Pero no aparece la voz de los docentes jóvenes <em>dentro</em> del Perú, los que están empezando, los que no tienen plaza fija. Ellos son el futuro y seguramente tienen otra perspectiva.</li>
+                <li><strong>¿Y las universidades privadas?</strong> La conversación se centra en las públicas. Pero en Perú hay un universo enorme de universidades privadas, con realidades muy distintas. ¿Cómo se insertan en este diagnóstico?</li>
+            </ul>
+
+            <h3>Lo que más me moviliza</h3>
+            <p>La frase final: <strong>"Pasemos del diagnóstico a la arquitectura institucional"</strong>. Esa es la clave. En América Latina somos expertos en diagnosticar, en quejarnos, en señalar problemas. Pero pasar de ahí a construir instituciones sólidas, con planos, con cimientos, con equipos... eso es lo difícil. Y este documento apunta justamente a eso.</p>
+            <p>La Cumbre que se propone no es para hablar de ciencia, es para hablar de <em>cómo se hace ciencia</em>. Y eso implica hablar de sueldos, de cargas horarias, de oficinas, de viajes, de apoyos, de burocracia. Es decir, de <strong>la vida cotidiana de los académicos</strong>. Eso es revolucionario.</p>
+        </div>
+
+        <!-- Glosario -->
+        <div class="glossary">
+            <h3>📖 Pequeño glosario (para lectores no peruanos)</h3>
+            <ul>
+                <li><strong>CONCYTEC:</strong> Consejo Nacional de Ciencia, Tecnología e Innovación Tecnológica. Ente rector del sistema de ciencia y tecnología.</li>
+                <li><strong>SUNEDU:</strong> Superintendencia Nacional de Educación Superior Universitaria. Supervisa la calidad de las universidades.</li>
+                <li><strong>Principal:</strong> Máxima categoría en la carrera docente universitaria pública.</li>
+                <li><strong>Argolla:</strong> Redes de poder cerradas que controlan el acceso a recursos y posiciones.</li>
+                <li><strong>PEX:</strong> Peruano en el Exterior (diáspora científica).</li>
+                <li><strong>Plaza:</strong> Puesto de trabajo estable en una universidad pública.</li>
+                <li><strong>Menú:</strong> Comida económica del día (entre 10 y 15 soles).</li>
+            </ul>
+            <div class="note" style="margin: 1rem 0 0;">
+                <strong>Nota sobre salarios:</strong> Según el Decreto Supremo N.° 123-2024-EF, el sueldo base de un profesor principal a tiempo completo en universidad pública es de aproximadamente S/ 8,469. Sin embargo, este monto puede incrementarse con bonos por investigación, productividad y otros conceptos, lo que explica las diferencias entre quienes acceden a esos estímulos y quienes no.
+            </div>
+        </div>
+
+        <!-- Preguntas para seguir pensando -->
+        <h2>💡 Preguntas para seguir pensando (y para compartir)</h2>
+        <p>Si este documento te ha interpelado, te invitamos a sumar tu propia experiencia y reflexión:</p>
+        <ul style="margin-bottom: 2rem;">
+            <li><strong>Si fueras a esta cumbre, ¿qué historia contarías?</strong> ¿Cómo es tu día a día como académico? ¿Qué condiciones tienes? ¿Qué te falta?</li>
+            <li><strong>¿Qué te gustaría escuchar de otros colegas latinoamericanos?</strong> ¿Qué preguntas les harías?</li>
+            <li><strong>¿Qué "plano arquitectónico" necesita el sistema científico de tu país?</strong> ¿Por dónde empezarías a construir?</li>
+        </ul>
+
+        <!-- Autor: José Gálvez (con espacio para logo) -->
+        <div class="author-section">
+            <div class="author-grid">
+                <div class="author-logo">
+                    <!-- CAMBIA EL NOMBRE DEL ARCHIVO POR EL DE TU LOGO -->
+                    <img src="logo1.png" alt="Logo de candidatura" style="max-width: 160px;">
+                </div>
+                <div class="author-text">
+                    <div class="author-name">José Gálvez</div>
+                    <div class="author-tagline">Candidato al Senado · <a href="https://fuerzapopular.com.pe/" target="_blank" style="text-decoration: none; color: inherit; border-bottom: 1px dotted #a77b4d;">Fuerza Popular</a></div>
+                    <div class="author-bio">
+                        <p>Ex docente de la <a href="https://unmsm.edu.pe" target="_blank" style="text-decoration: none; color: inherit; border-bottom: 1px dotted #a77b4d;">UNMSM</a> y la <a href="https://uni.edu.pe" target="_blank" style="text-decoration: none; color: inherit; border-bottom: 1px dotted #a77b4d;">UNI</a>. Trabajó en el <strong><a href="https://cern.ch" target="_blank" style="text-decoration: none; color: inherit; border-bottom: 1px dotted #a77b4d;">CERN</a></strong> (Centro Europeo de Investigación Nuclear) y en la <strong><a href="https://itu.int" target="_blank" style="text-decoration: none; color: inherit; border-bottom: 1px dotted #a77b4d;">UIT</a></strong> (Unión Internacional de Telecomunicaciones). Con experiencia en el sector privado y una trayectoria dedicada a la ciencia, la tecnología y el desarrollo universitario. Impulsor de la <strong>Cumbre Iberoamericana sobre Ciencia, Universidad y Desarrollo Nacional</strong> como espacio para construir, desde el diálogo y la experiencia comparada, una nueva arquitectura científica para el Perú.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Llamado a la acción -->
+        <div class="call-to-action">
+            <h3>Pasemos del diagnóstico a la arquitectura institucional</h3>
+            <p>La Cumbre quiere ser el lugar donde académicos, gestores, estudiantes y políticos diseñen juntos las instituciones que necesitamos. Si quieres sumarte, tienes ideas o conoces a alguien cuya experiencia debería estar en esta conversación, este es el momento.</p>
+            <p style="font-size: 1.6rem; font-family: Georgia; color: #f5e1c4; margin: 1rem 0;">En el Perú no falta el ladrillo. Falta el plano arquitectónico.</p>
+            <div class="btn"><a href="mailto:jose.galvez@jagalit.com" class="btn">Quiero sumarme a la Cumbre</a></div>
+            <p style="font-size: 0.95rem; margin-top: 2rem; opacity: 0.8;">(Envíame un mensaje por e-mail)</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Documento generado a partir de una conversación real en febrero de 2026. Se ha preservado el anonimato de los participantes y el contexto geográfico para facilitar la reflexión colectiva.</p>
+            <p style="margin-top: 1rem;">Puedes compartir, imprimir o difundir este documento. Las ideas son de quien las hace suyas.</p>
+        </div>
+
+    </div>
+    <iframe src="footer.html" width="100%" height="500px" frameborder="0"></iframe>
+
+</body>
+</html>

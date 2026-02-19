@@ -1,0 +1,513 @@
+/* Variables de color y fuentes */
+:root {
+  --primary-color: #001f3f;
+  --secondary-color: #003366;
+  --accent-color: #ffd700;
+  --light-accent: #c0c0c0;
+  --dark-accent: #cd7f32;
+  --text-color: #333;
+  --light-text: #666;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --gradient-primary: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+  --gradient-accent: linear-gradient(90deg, #ffd700, #c0c0c0, #cd7f32);
+  --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header mejorado */
+header {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 3rem 1rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-accent);
+  z-index: 2;
+}
+
+/* Contenedor del logo */
+.logo-container {
+  position: relative;
+  margin: 0 auto 2rem;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  100% { transform: scale(1.05); opacity: 1; }
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
+  transition: var(--transition);
+  z-index: 2;
+  position: relative;
+  padding: 20px;
+}
+
+.logo-container:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.logo-container:hover .logo-circle {
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.6);
+}
+
+/* Títulos del header */
+.header-title {
+  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.header-subtitle {
+  margin: 0;
+  font-size: 1.3rem;
+  opacity: 0.9;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* Resto del CSS... */
+/* Copia aquí TODO el CSS que tenías en el <style> */
+
+
+/* Contenido principal */
+main {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Introducción */
+.intro-section {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-light);
+  border-left: 5px solid var(--accent-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 1%, transparent 20%);
+  z-index: 0;
+}
+
+.intro-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+/* Filtros de categoría */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--card-bg);
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  color: var(--light-text);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Lista de artículos - Tarjetas modernas */
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.article-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.article-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.article-content {
+  padding: 1.8rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-title {
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--light-text);
+}
+
+.article-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.article-date i {
+  color: var(--accent-color);
+}
+
+.article-category {
+  background: #f0f2f5;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+}
+
+.article-excerpt {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  color: var(--light-text);
+  line-height: 1.5;
+}
+
+.article-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: var(--transition);
+  align-self: flex-start;
+}
+
+.article-link:hover {
+  color: var(--primary-color);
+  gap: 12px;
+}
+
+.article-link i {
+  transition: var(--transition);
+}
+
+/* Footer mejorado */
+footer {
+  background: var(--primary-color);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-accent);
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-logo {
+  max-width: 150px;
+  /* <--filter: brightness(0) invert(1); */
+  opacity: 0.8;
+
+  height: auto;
+  filter: none;   /* <-- importante */
+
+}
+
+.footer-text {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  opacity: 0.7;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+  }
+
+  .logo-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .articles-container {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-section {
+    padding: 1.8rem;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.7rem;
+  }
+
+  .category-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .intro-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Efectos especiales */
+.glow-effect {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Estilos para animaciones de entrada */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stagger-delay-1 { animation-delay: 0.1s; }
+.stagger-delay-2 { animation-delay: 0.2s; }
+.stagger-delay-3 { animation-delay: 0.3s; }
+.stagger-delay-4 { animation-delay: 0.4s; }
+
+/* Añade estos estilos a tu CSS existente */
+
+.format-indicator {
+  margin-left: 8px;
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+.category-count {
+  font-size: 0.8em;
+  opacity: 0.8;
+  margin-left: 4px;
+}
+
+.article-card[data-category="analisis"] {
+  border-top: 3px solid #3498db;
+}
+
+.article-card[data-category="politica"] {
+  border-top: 3px solid #e74c3c;
+}
+
+.article-card[data-category="ensayo"] {
+  border-top: 3px solid #9b59b6;
+}
+
+.article-card[data-category="reflexion"] {
+  border-top: 3px solid #f39c12;
+}
+
+.article-card[data-category="entrevista"] {
+  border-top: 3px solid #2ecc71;
+}
+
+.article-card[data-category="critica"] {
+  border-top: 3px solid #e67e22;
+}
+
+.article-card[data-category="economia"] {
+  border-top: 3px solid #1abc9c;
+}
+
+.article-card[data-category="cultura"] {
+  border-top: 3px solid #d35400;
+}

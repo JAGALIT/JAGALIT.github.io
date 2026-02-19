@@ -11,7 +11,8 @@
   html, body { background: var(--bg); color: var(--text); margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .wrap { max-width: 900px; margin: 0 auto; padding: 28px 18px 60px; }
+  .wrap1 { max-width: 900px; margin: 0 auto; padding: 28px 18px 60px; }
+  .wrap{max-width:var(--max);margin:0 auto;padding:22px 98px}
   header { padding: 18px 18px 14px; background: linear-gradient(180deg, rgba(123,223,242,0.12), rgba(0,0,0,0)); border: 1px solid var(--line); border-radius: 16px; }
   h1 { margin: 0; font-size: 30px; letter-spacing: -0.02em; }
   .sub { color: var(--muted); margin-top: 6px; line-height: 1.4; }
@@ -28,4 +29,3 @@
   details { border: 1px solid var(--line); border-radius: 14px; padding: 12px 12px; background: rgba(255,255,255,0.02); }
   summary { cursor: pointer; font-weight: 650; }
   footer { margin-top: 18px; color: var(--muted); font-size: 13px; }
-  

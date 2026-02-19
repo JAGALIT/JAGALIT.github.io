@@ -1,0 +1,117 @@
+<!-- Página final Redes Sociales-->
+<div class="social-container" style="background-color: #f8f9fa; padding: 40px 20px; margin: 50px 0 20px 0; border-radius: 10px; text-align: center;">
+    <h2 style="color: #333; margin-bottom: 30px; font-size: 18pt;">Redes Sociales y Contacto</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
+        <!-- Email -->
+        <div class="social-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <div style="font-size: 24px; color: #D44638; margin-bottom: 10px;">✉️</div>
+            <h4 style="margin: 10px 0; color: #333;">Email</h4>
+            <a href="mailto:jagalit@gmail.com" style="color: #0066cc; text-decoration: none; word-break: break-all;">
+                jagalit@gmail.com
+            </a>
+        </div>
+
+        <!-- X (Twitter) -->
+        <div class="social-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <div style="font-size: 24px; color: #000; margin-bottom: 10px;">𝕏</div>
+            <h4 style="margin: 10px 0; color: #333;">X (Twitter)</h4>
+            <a href="https://x.com/jagalit" target="_blank" style="color: #0066cc; text-decoration: none;">
+                @jagalit
+            </a>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="social-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <div style="font-size: 24px; color: #0077B5; margin-bottom: 10px;">💼</div>
+            <h4 style="margin: 10px 0; color: #333;">LinkedIn</h4>
+            <a href="https://linkedin.com/in/jagalit" target="_blank" style="color: #0066cc; text-decoration: none;">
+                linkedin.com/in/jagalit
+            </a>
+        </div>
+
+        <!-- Facebook -->
+        <div class="social-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <div style="font-size: 24px; color: #1877F2; margin-bottom: 10px;">👍</div>
+            <h4 style="margin: 10px 0; color: #333;">Facebook</h4>
+            <a href="https://facebook.com/jagalit" target="_blank" style="color: #0066cc; text-decoration: none;">
+                facebook.com/jagalit
+            </a>
+        </div>
+    </div>
+
+    <!-- Sitio web y blog -->
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px dashed #ccc;">
+        <div style="display: inline-block; margin: 0 15px;">
+            <a href="http://jagalit.com" target="_blank"
+            style="background-color: var(--fporange, #F36F21); color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 10px;">
+            🌐 Visita mi sitio web
+        </a>
+    </div>
+    <div style="display: inline-block; margin: 0 15px;">
+        <a href="https://jagalit.github.io/blog" target="_blank"
+        style="background-color: var(--fdpeblue, #0a235a); color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 10px;">
+        📚 Lee mi blog
+    </a>
+</div>
+</div>
+</div>
+
+<!-- Script para mejorar la interactividad -->
+<script>
+// Script para mejorar la interactividad
+document.addEventListener('DOMContentLoaded', function() {
+// Suavizar el desplazamiento para los enlaces del TOC
+const tocLinks = document.querySelectorAll('.toc a');
+
+tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            e.preventDefault();
+            window.scrollTo({
+                top: targetElement.offsetTop - 20,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Resaltar la sección actual en el TOC al desplazarse
+const sections = document.querySelectorAll('section, .highlight-box');
+const navLinks = document.querySelectorAll('.toc a');
+
+window.addEventListener('scroll', function() {
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollY >= (sectionTop - 100)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Añadir estilos para enlace activo
+const style = document.createElement('style');
+style.textContent = `
+.toc a.active {
+    color: var(--critical-red) !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+`;
+document.head.appendChild(style);
+});
+</script>
