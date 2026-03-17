@@ -5,25 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>José Gálvez · Senador PEX · Fuerza Popular</title>
   <meta name="description" content="José Gálvez, candidato al Senado por Peruanos en el Exterior (PEX) con Fuerza Popular. Plan legislativo: orden, ciencia, energía y diáspora integrada.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jagalit.github.io/index-JGK2-03.html">
+  <meta property="og:title" content="José Gálvez · Senador PEX · Fuerza Popular">
+  <meta property="og:description" content="Orden + Ciencia + Energía + Diáspora. Conoce el plan legislativo para los peruanos en el exterior.">
+  <meta property="og:image" content="https://jagalit.github.io/img/og-image.jpg"> <!-- Reemplaza con tu imagen real -->
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://jagalit.github.io/index-JGK2-03.html">
+  <meta property="twitter:title" content="José Gálvez · Senador PEX · Fuerza Popular">
+  <meta property="twitter:description" content="Orden + Ciencia + Energía + Diáspora. Conoce el plan legislativo para los peruanos en el exterior.">
+  <meta property="twitter:image" content="https://jagalit.github.io/img/og-image.jpg"> <!-- Reemplaza -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="sty/jagalitK201.css">
-  <link rel="stylesheet" href="sty/smjg.css">
-  <style></style>
+  <!-- Favicon (placeholder, reemplaza con archivo real) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗳️</text></svg>">
+  <link rel="stylesheet" href="sty/jagalitK203.css">
+  <style>  </style>
 </head>
 <body>
   <header>
     <div class="container navbar">
       <div class="logo">
         <a href="#">
-          <img src="img/k.png" alt="P Logo" style="max-width: 75px;">
-          <!--  <div class="logo-icon">FP</div> -->
+          <img src="img/k.png" alt="Fuerza Popular" style="max-width: 75px;">
           <div class="logo-text"><strong>José Gálvez · K2 · Candidato al Senado PEX</strong> <span>Fuerza Popular · Peruanos en el Exterior</span></div>
         </a>
       </div>
       <nav class="nav-links">
         <a href="#prioridades">Prioridades</a>
+        <a href="#sobre-mi">Sobre mí</a>
         <a href="#jpc">JPC-PEX</a>
         <a href="#ciencia">Ciencia</a>
         <a href="#energia">Energía</a>
@@ -33,7 +46,6 @@
   </header>
 
   <main>
-
     <!-- Hero Section -->
     <section class="hero">
       <div class="container hero-grid">
@@ -42,23 +54,30 @@
           <h1>José Gálvez <br><span class="accent">menos ruido,</span> más país</h1>
           <p class="hero-subhead">Primero ordenar el Estado, luego construir el desarrollo. Una propuesta seria para los peruanos en el exterior, con resultados verificables en 24 meses.</p>
           <div class="hero-stats">
-            <div class="stat-item">
+            <div class="stat-item" style="align-items: center; text-align: center;">
               <span class="stat-number">4M</span>
               <span class="stat-label">peruanos en el exterior</span>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" style="align-items: center; text-align: center;">
               <span class="stat-number">1.2M</span>
               <span class="stat-label">electores PEX</span>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" style="align-items: center; text-align: center;">
               <span class="stat-number">3</span>
               <span class="stat-label">prioridades estratégicas</span>
             </div>
           </div>
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
             <a href="#plan" class="btn btn-primary">Conoce el plan</a>
-            <a href="pdfs/Plan-Legislativo-JG-FP-K2-PEX.pdf" class="btn btn-outline" download>Descargar PDF</a>
+            <a href="pdfs/Plan-Legislativo-JG-FP-K2-PEX.pdf" class="btn btn-outline" download>Descargar plan (PDF)</a>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="pdfs/jose-galvez-CV.pdf" target="_blank" class="btn btn-outline">📄 Ver CV</a>
+              <a href="pdfs/jose-galvez-CV.pdf" download class="btn btn-outline">⬇️ Descargar CV</a>
+            </div>
           </div>
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--fp-gray);">
+            <strong>🗳️ Elecciones 2026:</strong> Marca la K y escribe el número 2. Tu voto desde el exterior construye país.
+          </p>
         </div>
         <div class="hero-image">
           <!-- Reemplaza con tu foto real -->
@@ -85,60 +104,97 @@
       </div>
     </section>
 
-    <!-- Sobre mi -->
-    <section id="sobre-mi" class="seccion">
-      <div class="contenedor">
-        <h2>Sobre José Gálvez</h2>
-        <h2>Una voz firme para los peruanos en el exterior</h2>
+    <!-- Sobre José Gálvez (versión compacta)
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div class="kicker">Candidato al Senado PEX</div>
+          <h2>José Gálvez: una voz firme para la diáspora</h2>
+        </div>
+        <div class="profile">
+          <img src="img/jgchc6.png" alt="José Gálvez" style="background: #ccc;">
+          <div class="profile-text">
+            <p>Con raíces en <strong>Ayacucho, Cajamarca, Iquitos y Chiclayo</strong>, José Gálvez representa una visión de país que une identidad, conocimiento y responsabilidad política. Su trayectoria combina experiencia internacional con un profundo compromiso con los peruanos en el exterior.</p>
+            <p><strong>Su agenda legislativa se basa en tres pilares:</strong></p>
+            <ul>
+              <li><strong>Diáspora integrada:</strong> Junta de Participación Ciudadana PEX, servicios consulares eficientes y protección jurídica transnacional.</li>
+              <li><strong>Ciencia e innovación:</strong> Fortalecimiento de CONCYTEC como agencia estratégica, conectando el talento peruano en el mundo.</li>
+              <li><strong>Energía competitiva:</strong> Evaluación de nuevas tecnologías (incluyendo SMR nucleares) para abaratar costos y atraer inversión.</li>
+            </ul>
+            <a href="pdfs/jose-galvez-CV.pdf" class="btn btn-outline" download style="margin-top: 1rem;">📄 Descargar CV detallado</a>
+          </div>
+        </div>
+      </div>
+    </section>
+-->
+    <!-- Sobre José Gálvez (versión compacta) -->
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div class="kicker">Candidato al Senado PEX</div>
+          <h2>José Gálvez: ciencia, experiencia internacional y compromiso con el Perú</h2>
+        </div>
+        <!-- Foto de perfil circular -->
+        <div class="profile">
+          <img src="img/jgchc6.png" alt="José Gálvez">
 
-        <p>
-          José Gálvez es candidato al <strong>Senado de la República por la circunscripción
-          de Peruanos en el Exterior (PEX)</strong> con el <strong>número 2 de Fuerza Popular</strong>.
-          Con raíces en <strong>Ayacucho, Cajamarca, Iquitos y Chiclayo</strong>, representa una visión de país que une
-          identidad, conocimiento y responsabilidad política.
-        </p>
-        <p>
-          Su propuesta parte de una convicción clara: <strong>los peruanos en el exterior deben ser
-          parte activa del desarrollo del país</strong>, no solo como migrantes o remitentes de remesas,
-          sino como una comunidad estratégica que aporta experiencia, talento y redes internacionales.
-        </p>
-        <p>
-          Su candidatura impulsa un <strong>plan legislativo enfocado en tres prioridades</strong>:
-          la integración efectiva de la diáspora peruana, el impulso a la ciencia e innovación,
-          y la promoción de una energía competitiva para el desarrollo productivo.
-        </p>
-        <p>
-          José Gálvez propone una política basada en <strong>orden institucional, pensamiento estratégico
-          y resultados concretos</strong>, convencido de que el Perú necesita menos improvisación
-          y más planificación.
-        </p>
-        <p>
-          José Gálvez, candidato al <strong>Senado PEX por Fuerza Popular, número 2</strong>,
-          propone una representación moderna y efectiva para los millones de peruanos que viven
-          fuera del país.
-        </p>
-        <p>
-          Su propuesta reconoce que la comunidad peruana en el exterior no solo sostiene vínculos
-          familiares y económicos con el Perú, sino que también constituye una <strong>fuerza social,
-          profesional y estratégica</strong> para el desarrollo nacional.
-        </p>
-        <p>
-          Su agenda legislativa busca fortalecer la relación entre el Estado y la diáspora peruana
-          mediante <strong>servicios consulares más eficientes, protección de derechos, impulso a la inversión
-          desde el exterior y mecanismos reales de participación política</strong>.
-        </p>
-        <p>
-          Para los PEX, esta candidatura representa una opción seria:
-          una voz que entiende el valor del trabajo migrante, la importancia del mérito, y la necesidad
-          de construir puentes entre el talento peruano en el exterior y el futuro del país.
-        </p>
-        <p>
-          <strong>PEX no debe ser una periferia política. Debe ser una prioridad nacional.</strong>
-        </p>
-        <p class="frase-final">
-            <strong>Una política seria, moderna y con visión de futuro para los peruanos dentro y fuera del país.</strong><br>
-          <strong>José Gálvez al Senado PEX. Marca la K y escribe 2.</strong>
-        </p>
+          <div class="profile-text">
+
+            <p>
+            José Gálvez es <strong>Doctor en Física (Cum Laude)</strong> y especialista en innovación,
+            tecnología y energía. Durante décadas ha desarrollado una carrera científica y profesional
+            internacional colaborando con universidades, centros de investigación y organismos
+            multilaterales en Europa y América Latina.
+            </p>
+
+            <p>
+            Ha participado en proyectos científicos y tecnológicos vinculados con instituciones de
+            referencia mundial como el <strong>CERN</strong> y programas de cooperación científica
+            internacional, trabajando en áreas como <strong>energía nuclear, energías renovables,
+            tecnologías de información e innovación aplicada</strong>.
+            </p>
+
+            <p>
+            Autor de más de <strong>30 publicaciones científicas internacionales</strong>, su trabajo
+            se ha orientado a conectar ciencia, tecnología y desarrollo económico, impulsando modelos
+            de cooperación entre universidades, sector privado y organismos internacionales.
+            </p>
+
+            <p>
+            Residiendo en Europa, ha vivido de cerca la realidad de los millones de peruanos que
+            construyen su vida fuera del país. Esta experiencia lo llevó a impulsar una propuesta
+            política que fortalezca la representación de la diáspora y que conecte el talento
+            peruano en el exterior con el desarrollo del Perú.
+            </p>
+
+            <p>
+            Su agenda legislativa se basa en tres pilares:
+            </p>
+
+            <ul>
+              <li><strong>Diáspora integrada:</strong> Junta de Participación Ciudadana PEX, servicios consulares modernos, eficientes y protección jurídica transnacional.</li>
+              <li><strong>Ciencia e innovación:</strong> Fortalecimiento de CONCYTEC como agencia estratégica, conectando el talento peruano en el mundo.</li>
+              <li><strong>Energía competitiva:</strong> Evaluación de nuevas tecnologías (incluyendo SMR nucleares) para abaratar costos y atraer inversión.</li>
+            </ul>
+
+            <p>
+            Su visión es clara: <strong>un Perú moderno, con instituciones sólidas, ciencia aplicada
+            y una diáspora integrada como actor estratégico del desarrollo nacional.</strong>
+            </p>
+
+            <p>
+            El compromiso es claro: trabajar con seriedad, método y responsabilidad
+            para lograr resultados concretos en beneficio de los peruanos dentro y fuera del país.
+            No estamos detrás de megaproyectos; estamos por el orden institucional, menos corrupción,
+            más seguridad ciudadana. Después, la clave: energía abundante, polos de desarrollo, y eso nos hará grandes.
+            </p>
+
+            <a href="pdfs/jose-galvez-CV.pdf" class="btn btn-outline" download>
+            📄 Descargar CV completo
+            </a>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -210,8 +266,8 @@
           </div>
         </div>
         <div class="jpc-image">
-          <!-- Aquí puedes poner un diagrama o icono -->
-          <img src="img/jpcpex.png" alt="Modelo JPC-PEX" style="background: #eee; height: 400px; display: flex; align-items: center; justify-content: center; color: #999;">
+          <!-- Diagrama o icono representativo -->
+          <img src="img/jpcpex.png" alt="Modelo institucional JPC-PEX" style="background: #eee; height: 300px; width: 100%; display: flex; align-items: center; justify-content: center; color: #999;">
           <p style="text-align: center; margin-top: 1rem; color: var(--fp-gray);">Modelo institucional de la JPC-PEX</p>
         </div>
       </div>
@@ -241,7 +297,7 @@
       </div>
     </section>
 
-    <!-- Hoja de ruta -->
+    <!-- Hoja de ruta (24 meses / 8 trimestres) -->
     <section class="section" id="hojaruta">
       <div class="container">
         <div class="section-title">
@@ -273,11 +329,19 @@
             <div class="quarter">T6</div>
             <div>Auditoría pública; ley escala salarial aprobada o etapa final avanzada; paquete de continuidad.</div>
           </div>
+          <div class="milestone">
+            <div class="quarter">T7</div>
+            <div>Implementación de mejoras consulares; acuerdos con universidades extranjeras; estudio de factibilidad de planta piloto.</div>
+          </div>
+          <div class="milestone">
+            <div class="quarter">T8</div>
+            <div>Evaluación de impacto de JPC; resultados preliminares de proyectos científicos; presentación de ley de energía competitiva.</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Convocatoria -->
+    <!-- Convocatoria a patrocinadores -->
     <section class="section" style="background: var(--fp-orange); color: white;">
       <div class="container" style="text-align: center;">
         <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Convocatoria</h2>
@@ -287,6 +351,7 @@
     </section>
   </main>
 
+  <!-- Footer unificado -->
   <footer>
     <div class="container footer-content">
       <div class="footer-contact">
@@ -296,26 +361,34 @@
         <span>jagalit.com · jagalit.github.io</span>
       </div>
       <div class="social-links">
-        <!-- Agrega iconos de redes sociales reales -->
-        <a href="mailto:jose.galvez@jagalit.com" class="btn">✉️Email</a>
-        <a href="http://x.com/jagalit" target="_blank"  aria-label="Twitter">𝕏</a>
-        <a href="http://LinkedIn.com/in/jagalit" target="_blank"  aria-label="LinkedIn">in</a>
-        <a href="‎http://whatsapp.com/dl/" target="_blank" aria-label="WhatsApp">📱</a>
-        <a href="https://facebook.com/jagalit" target="_blank" style="color: #0066cc; text-decoration: none;">👍</a>
-        <a href="https://github.com/JAGALIT" target="_blank" class="btn">💻 GitHub</a>
-        <a href="http://jagalit.github.io/index-JGK2-01.html" target="_blank" class="btn">🌐 Website</a>
+        <a href="mailto:jose.galvez@jagalit.com" aria-label="Email">📧</a>
+        <a href="https://x.com/jagalit" target="_blank" aria-label="X (Twitter)">𝕏</a>
+        <a href="https://linkedin.com/in/jagalit" target="_blank" aria-label="LinkedIn">💼</a>
+        <a href="https://wa.me/41791933545" target="_blank" aria-label="WhatsApp">📱</a>
+        <a href="https://facebook.com/jagalit" target="_blank" aria-label="Facebook">👍</a>
+        <a href="https://github.com/JAGALIT" target="_blank" aria-label="GitHub">🐙</a>
+        <a href="http://jagalit.github.io/index-JGK2-01.html" target="_blank" aria-label="Sitio web">🌐</a>
       </div>
-
-
-      <div style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
-        Marca la K y escribe el 2 hasta el final
+      <div style="color: rgba(255,255,255,0.6); font-size: 0.9rem; width: 100%; text-align: center; margin-top: 1rem;">
+        <h3>Es momento de dar el siguiente paso</h3>
+        <p>Los peruanos en el exterior también decidimos el rumbo del país.</p>
+        <p><strong>Vota por José Gálvez</strong></p>
+        <p><span>Senador PEX · Fuerza Popular</span></p>
+        <p><strong>Marca la K y escribe el número 2.</strong></p>
+        <p><div class="badge-k">K2</div></p>
+    <!--       Marca la K y escribe el 2 hasta el final · Elecciones 2026  -->
       </div>
     </div>
-  </footer>
-  <iframe src="sty/footer.html" width="100%" height="500px" frameborder="0"></iframe>
 
-  <footer>
-    <p>© 2026 · Jagalit · Geneva · Switzerland.</p>
+    <div class="hero-image">
+      <!-- Reemplaza con tu foto real -->
+      <img src="img/cdspex.png" alt="Cédula Electoral PEX" style="background: #ddd;">
+    </div>
+
+
+    <div style="text-align: center; padding-top: 2rem; color: #aaa; font-size: 0.8rem;">
+      © 2026 · Jagalit · Geneva · Switzerland.
+    </div>
   </footer>
 </body>
 </html>
