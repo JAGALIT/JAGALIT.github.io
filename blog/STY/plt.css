@@ -1,10 +1,19 @@
 :root {
-  --red:#B5121B; --char:#1F2937; --mid:#374151; --light:#F3F4F6; --line:#E5E7EB;
+  --red:#B5121B;
+  --char:#1F2937;
+  --mid:#374151;
+  --light:#F3F4F6;
+  --line:#E5E7EB;
   --max: 980px;
 }
+
 *{box-sizing:border-box}
+
 body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--char);line-height:1.5;background:#fff}
+
 header{background:var(--red);color:#fff}
+
+
 .wrap{max-width:var(--max);margin:0 auto;padding:22px 98px}
 h1{margin:8px 0 6px;font-size:34px;line-height:1.1}
 h2{margin:28px 0 10px;font-size:20px}

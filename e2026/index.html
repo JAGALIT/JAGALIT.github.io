@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Control de actas electorales — Berna y Ginebra</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; line-height: 1.45; color: #222; background: #fafafa; }
+h1, h2, h3 { margin-top: 0; }
+.meta, .card, .panel, .alert { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 20px 0; }
+.card.ok { border-left: 8px solid #2e7d32; }
+.card.warn { border-left: 8px solid #f9a825; }
+.card.danger { border-left: 8px solid #c62828; }
+.card.muted { border-left: 8px solid #999; }
+.alert.critical { border-left: 10px solid #b71c1c; background: #fff5f5; margin-bottom: 14px; }
+table { width: 100%; border-collapse: collapse; background: #fff; font-size: 14px; }
+th, td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+th { background: #f0f0f0; position: sticky; top: 0; }
+.missing { color: #c62828; font-weight: bold; }
+a { color: #0b57d0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.small { font-size: 13px; color: #555; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.pill { display: inline-block; padding: 3px 8px; border-radius: 999px; font-size: 12px; font-weight: bold; }
+.pill.ok { background: #e8f5e9; color: #1b5e20; }
+.pill.warn { background: #fff8e1; color: #8d6e00; }
+.pill.danger { background: #ffebee; color: #b71c1c; }
+.pill.muted { background: #f1f1f1; color: #666; }
+.highlight { background: #fff3cd; border: 1px solid #f0d98a; padding: 12px; border-radius: 10px; margin-bottom: 16px; }
+@media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<h1>Control de ficheros electorales — Berna / Ginebra</h1>
+
+<div class="meta">
+  <p><strong>Objetivo:</strong> ayudar a los personeros a encontrar rápidamente las actas faltantes y detectar mesas sin ningún fichero.</p>
+  <p><strong>Berna:</strong> mesas 019–028 | <strong>Ginebra:</strong> mesas 029–037.</p>
+  <p class="small">Los ficheros se encuentran en la carpeta 'ficheros/'. Este HTML apunta automáticamente a esa carpeta.</p>
+</div>
+
+<div class="highlight">
+  <strong>Actualización incorporada:</strong> se añadieron los electores informados para Ginebra:
+  mesa 032 = 490, mesa 035 = 490, mesa 036 = 490 y mesa 037 = 489.
+</div>
+
+
+<div class="highlight">
+<strong>Actualización:</strong> se añadieron electores: mesa 029 = 486, mesa 031 = 490, mesa 033 = 490 y mesa 034 = 490.
+</div>
+
+<h2>Alertas prioritarias para personeros</h2>
+
+    <div class="alert critical">
+      <h3>🚨 PRIORIDAD MÁXIMA — Mesa 022 (Berna)</h3>
+      <p><strong>No existe ningún fichero asociado</strong> en el listado actual.</p>
+      <p><strong>Electores:</strong> 497</p>
+      <p><strong>Acción:</strong> buscar inmediatamente fotos o PDF de toda la mesa, en especial presidencial, senado nacional, senado PEX, diputado PEX y parlamento andino con sus actas.</p>
+    </div>
+    
+    <div class="alert critical">
+      <h3>🚨 PRIORIDAD MÁXIMA — Mesa 023 (Berna)</h3>
+      <p><strong>No existe ningún fichero asociado</strong> en el listado actual.</p>
+      <p><strong>Electores:</strong> 497</p>
+      <p><strong>Acción:</strong> buscar inmediatamente fotos o PDF de toda la mesa, en especial presidencial, senado nacional, senado PEX, diputado PEX y parlamento andino con sus actas.</p>
+    </div>
+    
+    <div class="alert critical">
+      <h3>🚨 PRIORIDAD MÁXIMA — Mesa 030 (Ginebra)</h3>
+      <p><strong>No existe ningún fichero asociado</strong> en el listado actual.</p>
+      <p><strong>Electores:</strong> 490</p>
+      <p><strong>Acción:</strong> buscar inmediatamente fotos o PDF de toda la mesa, en especial presidencial, senado nacional, senado PEX, diputado PEX y parlamento andino con sus actas.</p>
+    </div>
+    
+    <div class="alert critical">
+      <h3>🚨 PRIORIDAD MÁXIMA — Mesa 036 (Ginebra)</h3>
+      <p><strong>No existe ningún fichero asociado</strong> en el listado actual.</p>
+      <p><strong>Electores:</strong> 490</p>
+      <p><strong>Acción:</strong> buscar inmediatamente fotos o PDF de toda la mesa, en especial presidencial, senado nacional, senado PEX, diputado PEX y parlamento andino con sus actas.</p>
+    </div>
+    
+    <div class="alert critical">
+      <h3>🚨 PRIORIDAD MÁXIMA — Mesa 037 (Ginebra)</h3>
+      <p><strong>No existe ningún fichero asociado</strong> en el listado actual.</p>
+      <p><strong>Electores:</strong> 489</p>
+      <p><strong>Acción:</strong> buscar inmediatamente fotos o PDF de toda la mesa, en especial presidencial, senado nacional, senado PEX, diputado PEX y parlamento andino con sus actas.</p>
+    </div>
+    
+
+<h2>Estado rápido por mesa</h2>
+<div class="grid">
+  
+    <div class="card warn">
+      <h3>Mesa 019 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 493</p>
+      <p>Avance detectado: <strong>50%</strong></p><p>Falta: Acta presidencial, Senado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 020 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 497</p>
+      <p>Avance detectado: <strong>40%</strong></p><p>Falta: Acta Senado nacional, Senado PEX, Acta Senado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 021 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 497</p>
+      <p>Avance detectado: <strong>30%</strong></p><p>Falta: Acta presidencial, Acta Senado nacional, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card danger">
+      <h3>Mesa 022 — SIN NINGÚN FICHERO</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 497</p>
+      <p><strong>No hay ningún fichero cargado.</strong></p>
+    </div>
+    
+    <div class="card danger">
+      <h3>Mesa 023 — SIN NINGÚN FICHERO</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 497</p>
+      <p><strong>No hay ningún fichero cargado.</strong></p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 024 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 496</p>
+      <p>Avance detectado: <strong>40%</strong></p><p>Falta: Acta Senado nacional, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card ok">
+      <h3>Mesa 025 — COMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 496</p>
+      <p>La mesa está completa según el patrón esperado.</p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 026 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 496</p>
+      <p>Avance detectado: <strong>60%</strong></p><p>Falta: Senado nacional, Acta Senado nacional, Diputado PEX, Acta Diputado PEX</p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 027 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 496</p>
+      <p>Avance detectado: <strong>40%</strong></p><p>Falta: Acta presidencial, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX</p>
+    </div>
+    
+    <div class="card ok">
+      <h3>Mesa 028 — COMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Berna | <strong>Electores:</strong> 496</p>
+      <p>La mesa está completa según el patrón esperado.</p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 029 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Ginebra | <strong>Electores:</strong> 486</p>
+      <p>Avance detectado: <strong>50%</strong></p><p>Falta: Acta presidencial, Acta Senado nacional, Acta Senado PEX, Acta Diputado PEX, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card danger">
+      <h3>Mesa 030 — SIN NINGÚN FICHERO</h3>
+      <p class='small'><strong>Zona:</strong> Ginebra | <strong>Electores:</strong> 490</p>
+      <p><strong>No hay ningún fichero cargado.</strong></p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 031 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Ginebra | <strong>Electores:</strong> 490</p>
+      <p>Avance detectado: <strong>60%</strong></p><p>Falta: Acta Senado nacional, Acta Senado PEX, Parlamento Andino, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 032 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Ginebra | <strong>Electores:</strong> 490</p>
+      <p>Avance detectado: <strong>60%</strong></p><p>Falta: Acta Senado nacional, Acta Senado PEX, Acta Diputado PEX, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 033 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Ginebra | <strong>Electores:</strong> 490</p>
+      <p>Avance detectado: <strong>40%</strong></p><p>Falta: Presidencial, Acta Senado nacional, Senado PEX, Acta Senado PEX, Acta Diputado PEX, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 034 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Ginebra | <strong>Electores:</strong> 490</p>
+      <p>Avance detectado: <strong>10%</strong></p><p>Falta: Acta presidencial, Senado nacional, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card warn">
+      <h3>Mesa 035 — INCOMPLETA</h3>
+      <p class='small'><strong>Zona:</strong> Ginebra | <strong>Electores:</strong> 490</p>
+      <p>Avance detectado: <strong>10%</strong></p><p>Falta: Presidencial, Senado nacional, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</p>
+    </div>
+    
+    <div class="card danger">
+      <h3>Mesa 036 — SIN NINGÚN FICHERO</h3>
+      <p class='small'><strong>Zona:</strong> Ginebra | <strong>Electores:</strong> 490</p>
+      <p><strong>No hay ningún fichero cargado.</strong></p>
+    </div>
+    
+    <div class="card danger">
+      <h3>Mesa 037 — SIN NINGÚN FICHERO</h3>
+      <p class='small'><strong>Zona:</strong> Ginebra | <strong>Electores:</strong> 489</p>
+      <p><strong>No hay ningún fichero cargado.</strong></p>
+    </div>
+    
+</div>
+
+<h2>Resumen ejecutivo</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Mesa</th>
+      <th>Zona</th>
+      <th>Electores</th>
+      <th>Estado</th>
+      <th>Avance</th>
+      <th>Qué falta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>019</strong></td><td>Berna</td><td>493</td><td><span class='pill warn'>INCOMPLETA</span></td><td>50%</td><td>Acta presidencial, Senado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>020</strong></td><td>Berna</td><td>497</td><td><span class='pill warn'>INCOMPLETA</span></td><td>40%</td><td>Acta Senado nacional, Senado PEX, Acta Senado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>021</strong></td><td>Berna</td><td>497</td><td><span class='pill warn'>INCOMPLETA</span></td><td>30%</td><td>Acta presidencial, Acta Senado nacional, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>022</strong></td><td>Berna</td><td>497</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td>0%</td><td>Presidencial, Acta presidencial, Senado nacional, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>023</strong></td><td>Berna</td><td>497</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td>0%</td><td>Presidencial, Acta presidencial, Senado nacional, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>024</strong></td><td>Berna</td><td>496</td><td><span class='pill warn'>INCOMPLETA</span></td><td>40%</td><td>Acta Senado nacional, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>025</strong></td><td>Berna</td><td>496</td><td><span class='pill ok'>COMPLETA</span></td><td>100%</td><td>Ninguno</td></tr><tr><td><strong>026</strong></td><td>Berna</td><td>496</td><td><span class='pill warn'>INCOMPLETA</span></td><td>60%</td><td>Senado nacional, Acta Senado nacional, Diputado PEX, Acta Diputado PEX</td></tr><tr><td><strong>027</strong></td><td>Berna</td><td>496</td><td><span class='pill warn'>INCOMPLETA</span></td><td>40%</td><td>Acta presidencial, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX</td></tr><tr><td><strong>028</strong></td><td>Berna</td><td>496</td><td><span class='pill ok'>COMPLETA</span></td><td>100%</td><td>Ninguno</td></tr><tr><td><strong>029</strong></td><td>Ginebra</td><td>486</td><td><span class='pill warn'>INCOMPLETA</span></td><td>50%</td><td>Acta presidencial, Acta Senado nacional, Acta Senado PEX, Acta Diputado PEX, Acta Parlamento Andino</td></tr><tr><td><strong>030</strong></td><td>Ginebra</td><td>490</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td>0%</td><td>Presidencial, Acta presidencial, Senado nacional, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>031</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td>60%</td><td>Acta Senado nacional, Acta Senado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>032</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td>60%</td><td>Acta Senado nacional, Acta Senado PEX, Acta Diputado PEX, Acta Parlamento Andino</td></tr><tr><td><strong>033</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td>40%</td><td>Presidencial, Acta Senado nacional, Senado PEX, Acta Senado PEX, Acta Diputado PEX, Acta Parlamento Andino</td></tr><tr><td><strong>034</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td>10%</td><td>Acta presidencial, Senado nacional, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>035</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td>10%</td><td>Presidencial, Senado nacional, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>036</strong></td><td>Ginebra</td><td>490</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td>0%</td><td>Presidencial, Acta presidencial, Senado nacional, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr><tr><td><strong>037</strong></td><td>Ginebra</td><td>489</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td>0%</td><td>Presidencial, Acta presidencial, Senado nacional, Acta Senado nacional, Senado PEX, Acta Senado PEX, Diputado PEX, Acta Diputado PEX, Parlamento Andino, Acta Parlamento Andino</td></tr>
+  </tbody>
+</table>
+
+<h2 style="margin-top:24px;">Relación oficial de mesas</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Mesa</th>
+      <th>Zona</th>
+      <th>Electores</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>019</strong></td><td>Berna</td><td>493</td></tr><tr><td><strong>020</strong></td><td>Berna</td><td>497</td></tr><tr><td><strong>021</strong></td><td>Berna</td><td>497</td></tr><tr><td><strong>022</strong></td><td>Berna</td><td>497</td></tr><tr><td><strong>023</strong></td><td>Berna</td><td>497</td></tr><tr><td><strong>024</strong></td><td>Berna</td><td>496</td></tr><tr><td><strong>025</strong></td><td>Berna</td><td>496</td></tr><tr><td><strong>026</strong></td><td>Berna</td><td>496</td></tr><tr><td><strong>027</strong></td><td>Berna</td><td>496</td></tr><tr><td><strong>028</strong></td><td>Berna</td><td>496</td></tr><tr><td><strong>029</strong></td><td>Ginebra</td><td>486</td></tr><tr><td><strong>030</strong></td><td>Ginebra</td><td>490</td></tr><tr><td><strong>031</strong></td><td>Ginebra</td><td>490</td></tr><tr><td><strong>032</strong></td><td>Ginebra</td><td>490</td></tr><tr><td><strong>033</strong></td><td>Ginebra</td><td>490</td></tr><tr><td><strong>034</strong></td><td>Ginebra</td><td>490</td></tr><tr><td><strong>035</strong></td><td>Ginebra</td><td>490</td></tr><tr><td><strong>036</strong></td><td>Ginebra</td><td>490</td></tr><tr><td><strong>037</strong></td><td>Ginebra</td><td>489</td></tr>
+  </tbody>
+</table>
+
+<h2 style="margin-top:24px;">Tabla detallada de control</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Mesa</th>
+      <th>Zona</th>
+      <th>Electores</th>
+      <th>Estado</th>
+      <th>Presidencial</th>
+      <th>Acta presidencial</th>
+      <th>Senado nacional</th>
+      <th>Acta Senado nacional</th>
+      <th>Senado PEX</th>
+      <th>Acta Senado PEX</th>
+      <th>Diputado PEX</th>
+      <th>Acta Diputado PEX</th>
+      <th>Parlamento Andino</th>
+      <th>Acta Parlamento Andino</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>019</strong></td><td>Berna</td><td>493</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/019pr.jpg" target="_blank">019pr.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/019s.jpg" target="_blank">019s.jpg</a></td><td><a href="ficheros/019-5b.jpg" target="_blank">019-5b.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/019-6b.jpg" target="_blank">019-6b.jpg</a><br><a href="ficheros/019-6b.pdf" target="_blank">019-6b.pdf</a></td><td><a href="ficheros/019dpex.jpg" target="_blank">019dpex.jpg</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>020</strong></td><td>Berna</td><td>497</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/020-4a.jpg" target="_blank">020-4a.jpg</a><br><a href="ficheros/020-4a.pdf" target="_blank">020-4a.pdf</a><br><a href="ficheros/020pr.jpg" target="_blank">020pr.jpg</a></td><td><a href="ficheros/020-4b.jpg" target="_blank">020-4b.jpg</a><br><a href="ficheros/020-4b.pdf" target="_blank">020-4b.pdf</a></td><td><a href="ficheros/020s.jpg" target="_blank">020s.jpg</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/020dpex.jpg" target="_blank">020dpex.jpg</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>021</strong></td><td>Berna</td><td>497</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/021pr.jpg" target="_blank">021pr.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/021s.jpg" target="_blank">021s.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/021spex.jpg" target="_blank">021spex.jpg</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>022</strong></td><td>Berna</td><td>497</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>023</strong></td><td>Berna</td><td>497</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>024</strong></td><td>Berna</td><td>496</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/024-4a.pdf" target="_blank">024-4a.pdf</a><br><a href="ficheros/024pr.jpg" target="_blank">024pr.jpg</a></td><td><a href="ficheros/024-4b.pdf" target="_blank">024-4b.pdf</a></td><td><a href="ficheros/024s.jpg" target="_blank">024s.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/024spex.jpg" target="_blank">024spex.jpg</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>025</strong></td><td>Berna</td><td>496</td><td><span class='pill ok'>COMPLETA</span></td><td><a href="ficheros/025-4a.pdf" target="_blank">025-4a.pdf</a><br><a href="ficheros/025pr.jpg" target="_blank">025pr.jpg</a></td><td><a href="ficheros/025-4b.pdf" target="_blank">025-4b.pdf</a></td><td><a href="ficheros/025-5a.pdf" target="_blank">025-5a.pdf</a></td><td><a href="ficheros/025-5b.pdf" target="_blank">025-5b.pdf</a></td><td><a href="ficheros/025-6a.pdf" target="_blank">025-6a.pdf</a></td><td><a href="ficheros/025-6b.pdf" target="_blank">025-6b.pdf</a></td><td><a href="ficheros/025-7a.pdf" target="_blank">025-7a.pdf</a></td><td><a href="ficheros/025-7b.pdf" target="_blank">025-7b.pdf</a></td><td><a href="ficheros/025-8a.pdf" target="_blank">025-8a.pdf</a></td><td><a href="ficheros/025-8b.pdf" target="_blank">025-8b.pdf</a></td></tr><tr><td><strong>026</strong></td><td>Berna</td><td>496</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/026-4a.pdf" target="_blank">026-4a.pdf</a><br><a href="ficheros/026pr.jpg" target="_blank">026pr.jpg</a></td><td><a href="ficheros/026-4b.pdf" target="_blank">026-4b.pdf</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/026-6a.pdf" target="_blank">026-6a.pdf</a></td><td><a href="ficheros/026-6b.pdf" target="_blank">026-6b.pdf</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/026-8a.pdf" target="_blank">026-8a.pdf</a></td><td><a href="ficheros/026-8b.pdf" target="_blank">026-8b.pdf</a></td></tr><tr><td><strong>027</strong></td><td>Berna</td><td>496</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/027pr.jpg" target="_blank">027pr.jpg</a><br><a href="ficheros/027pr1.jpg" target="_blank">027pr1.jpg</a><br><a href="ficheros/027pr2.jpg" target="_blank">027pr2.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/027s.jpg" target="_blank">027s.jpg</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/027-8a.pdf" target="_blank">027-8a.pdf</a><br><a href="ficheros/027pa.jpg" target="_blank">027pa.jpg</a><br><a href="ficheros/027pa1.jpg" target="_blank">027pa1.jpg</a></td><td><a href="ficheros/027-8b.pdf" target="_blank">027-8b.pdf</a><br><a href="ficheros/027paa.jpg" target="_blank">027paa.jpg</a></td></tr><tr><td><strong>028</strong></td><td>Berna</td><td>496</td><td><span class='pill ok'>COMPLETA</span></td><td><a href="ficheros/028-4a.jpg" target="_blank">028-4a.jpg</a><br><a href="ficheros/028-4a.pdf" target="_blank">028-4a.pdf</a><br><a href="ficheros/028pr.jpg" target="_blank">028pr.jpg</a></td><td><a href="ficheros/028-4b.jpg" target="_blank">028-4b.jpg</a><br><a href="ficheros/028-4b.pdf" target="_blank">028-4b.pdf</a></td><td><a href="ficheros/028-5a.pdf" target="_blank">028-5a.pdf</a></td><td><a href="ficheros/028-5b.pdf" target="_blank">028-5b.pdf</a></td><td><a href="ficheros/028-6a.pdf" target="_blank">028-6a.pdf</a></td><td><a href="ficheros/028-6b.pdf" target="_blank">028-6b.pdf</a></td><td><a href="ficheros/028-7a.pdf" target="_blank">028-7a.pdf</a></td><td><a href="ficheros/028-7b.pdf" target="_blank">028-7b.pdf</a></td><td><a href="ficheros/028-8a.pdf" target="_blank">028-8a.pdf</a></td><td><a href="ficheros/028-8b.pdf" target="_blank">028-8b.pdf</a></td></tr><tr><td><strong>029</strong></td><td>Ginebra</td><td>486</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/029-4a.jpg" target="_blank">029-4a.jpg</a><br><a href="ficheros/029-4a.pdf" target="_blank">029-4a.pdf</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/029-5a.jpg" target="_blank">029-5a.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/029-6a.jpg" target="_blank">029-6a.jpg</a><br><a href="ficheros/029-6a.pdf" target="_blank">029-6a.pdf</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/029-7a.jpg" target="_blank">029-7a.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/029-8a.jpg" target="_blank">029-8a.jpg</a><br><a href="ficheros/029-8a.pdf" target="_blank">029-8a.pdf</a><br><a href="ficheros/029-8a1.jpg" target="_blank">029-8a1.jpg</a></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>030</strong></td><td>Ginebra</td><td>490</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>031</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/031pr.jpg" target="_blank">031pr.jpg</a></td><td><a href="ficheros/031-4b.jpg" target="_blank">031-4b.jpg</a><br><a href="ficheros/031-4b.pdf" target="_blank">031-4b.pdf</a><br><a href="ficheros/031-4b1.jpg" target="_blank">031-4b1.jpg</a></td><td><a href="ficheros/031s.jpg" target="_blank">031s.jpg</a><br><a href="ficheros/031s1.jpg" target="_blank">031s1.jpg</a><br><a href="ficheros/031s2.jpg" target="_blank">031s2.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/031spex.jpg" target="_blank">031spex.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/031-7a.jpg" target="_blank">031-7a.jpg</a><br><a href="ficheros/031-7a.pdf" target="_blank">031-7a.pdf</a></td><td><a href="ficheros/031-7b.jpg" target="_blank">031-7b.jpg</a><br><a href="ficheros/031-7b.pdf" target="_blank">031-7b.pdf</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>032</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/032-4a.jpg" target="_blank">032-4a.jpg</a><br><a href="ficheros/032-4a.pdf" target="_blank">032-4a.pdf</a></td><td><a href="ficheros/032pra2.jpg" target="_blank">032pra2.jpg</a></td><td><a href="ficheros/032-5a.jpg" target="_blank">032-5a.jpg</a><br><a href="ficheros/032-5a.pdf" target="_blank">032-5a.pdf</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/032-6a.jpg" target="_blank">032-6a.jpg</a><br><a href="ficheros/032-6a.pdf" target="_blank">032-6a.pdf</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/032-7a.jpg" target="_blank">032-7a.jpg</a><br><a href="ficheros/032-7a.pdf" target="_blank">032-7a.pdf</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/032-8a.jpg" target="_blank">032-8a.jpg</a><br><a href="ficheros/032-8a.pdf" target="_blank">032-8a.pdf</a></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>033</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/033-4b.jpg" target="_blank">033-4b.jpg</a><br><a href="ficheros/033-4b.pdf" target="_blank">033-4b.pdf</a></td><td><a href="ficheros/033s.jpg" target="_blank">033s.jpg</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/033pex.jpg" target="_blank">033pex.jpg</a></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/033pa.jpg" target="_blank">033pa.jpg</a></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>034</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td><a href="ficheros/034pr.jpg" target="_blank">034pr.jpg</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>035</strong></td><td>Ginebra</td><td>490</td><td><span class='pill warn'>INCOMPLETA</span></td><td><span class="missing">FALTA</span></td><td><a href="ficheros/035-4b.jpg" target="_blank">035-4b.jpg</a><br><a href="ficheros/035-4b.pdf" target="_blank">035-4b.pdf</a></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>036</strong></td><td>Ginebra</td><td>490</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr><tr><td><strong>037</strong></td><td>Ginebra</td><td>489</td><td><span class='pill danger'>SIN NINGÚN FICHERO</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td><td><span class="missing">FALTA</span></td></tr>
+  </tbody>
+</table>
+
+<div class="two-col" style="margin-top:24px;">
+  <div class="panel">
+    <h2>Notas</h2>
+    <ul>
+      <li>Se incorporaron los electores de Ginebra informados: mesa 032 = 490, mesa 035 = 490, mesa 036 = 490 y mesa 037 = 489.</li><li>La mesa 030 se considera oficial en Ginebra con 490 electores.</li><li>Las mesas oficiales sin ningún fichero quedan marcadas como prioridad máxima.</li><li>Se considera completa cada mesa si tiene 10 grupos: presidencial, acta presidencial, senado nacional, acta senado nacional, senado PEX, acta senado PEX, diputado PEX, acta diputado PEX, parlamento andino y acta parlamento andino.</li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h2>Listado completo recibido</h2>
+    <ul><li><a href="ficheros/019-5b.jpg" target="_blank">019-5b.jpg</a></li><li><a href="ficheros/019-6b.jpg" target="_blank">019-6b.jpg</a></li><li><a href="ficheros/019-6b.pdf" target="_blank">019-6b.pdf</a></li><li><a href="ficheros/019dpex.jpg" target="_blank">019dpex.jpg</a></li><li><a href="ficheros/019pr.jpg" target="_blank">019pr.jpg</a></li><li><a href="ficheros/019s.jpg" target="_blank">019s.jpg</a></li><li><a href="ficheros/020-4a.jpg" target="_blank">020-4a.jpg</a></li><li><a href="ficheros/020-4a.pdf" target="_blank">020-4a.pdf</a></li><li><a href="ficheros/020-4b.jpg" target="_blank">020-4b.jpg</a></li><li><a href="ficheros/020-4b.pdf" target="_blank">020-4b.pdf</a></li><li><a href="ficheros/020dpex.jpg" target="_blank">020dpex.jpg</a></li><li><a href="ficheros/020pr.jpg" target="_blank">020pr.jpg</a></li><li><a href="ficheros/020s.jpg" target="_blank">020s.jpg</a></li><li><a href="ficheros/021pr.jpg" target="_blank">021pr.jpg</a></li><li><a href="ficheros/021s.jpg" target="_blank">021s.jpg</a></li><li><a href="ficheros/021spex.jpg" target="_blank">021spex.jpg</a></li><li><a href="ficheros/024-4a.pdf" target="_blank">024-4a.pdf</a></li><li><a href="ficheros/24-4ab.pdf" target="_blank">24-4ab.pdf</a></li><li><a href="ficheros/024-4b.pdf" target="_blank">024-4b.pdf</a></li><li><a href="ficheros/024pr.jpg" target="_blank">024pr.jpg</a></li><li><a href="ficheros/024s.jpg" target="_blank">024s.jpg</a></li><li><a href="ficheros/024spex.jpg" target="_blank">024spex.jpg</a></li><li><a href="ficheros/025-4a.pdf" target="_blank">025-4a.pdf</a></li><li><a href="ficheros/025-4b.pdf" target="_blank">025-4b.pdf</a></li><li><a href="ficheros/025-5a.pdf" target="_blank">025-5a.pdf</a></li><li><a href="ficheros/025-5b.pdf" target="_blank">025-5b.pdf</a></li><li><a href="ficheros/025-6a.pdf" target="_blank">025-6a.pdf</a></li><li><a href="ficheros/025-6b.pdf" target="_blank">025-6b.pdf</a></li><li><a href="ficheros/025-7a.pdf" target="_blank">025-7a.pdf</a></li><li><a href="ficheros/025-7b.pdf" target="_blank">025-7b.pdf</a></li><li><a href="ficheros/025-8a.pdf" target="_blank">025-8a.pdf</a></li><li><a href="ficheros/025-8b.pdf" target="_blank">025-8b.pdf</a></li><li><a href="ficheros/025pr.jpg" target="_blank">025pr.jpg</a></li><li><a href="ficheros/026-4a.pdf" target="_blank">026-4a.pdf</a></li><li><a href="ficheros/026-4b.pdf" target="_blank">026-4b.pdf</a></li><li><a href="ficheros/026-6a.pdf" target="_blank">026-6a.pdf</a></li><li><a href="ficheros/026-6b.pdf" target="_blank">026-6b.pdf</a></li><li><a href="ficheros/026-8a.pdf" target="_blank">026-8a.pdf</a></li><li><a href="ficheros/026-8b.pdf" target="_blank">026-8b.pdf</a></li><li><a href="ficheros/026pr.jpg" target="_blank">026pr.jpg</a></li><li><a href="ficheros/027-8a.pdf" target="_blank">027-8a.pdf</a></li><li><a href="ficheros/027-8b.pdf" target="_blank">027-8b.pdf</a></li><li><a href="ficheros/027pa.jpg" target="_blank">027pa.jpg</a></li><li><a href="ficheros/027pa1.jpg" target="_blank">027pa1.jpg</a></li><li><a href="ficheros/027paa.jpg" target="_blank">027paa.jpg</a></li><li><a href="ficheros/027pr.jpg" target="_blank">027pr.jpg</a></li><li><a href="ficheros/027pr1.jpg" target="_blank">027pr1.jpg</a></li><li><a href="ficheros/027pr2.jpg" target="_blank">027pr2.jpg</a></li><li><a href="ficheros/027s.jpg" target="_blank">027s.jpg</a></li><li><a href="ficheros/028-4a.jpg" target="_blank">028-4a.jpg</a></li><li><a href="ficheros/028-4a.pdf" target="_blank">028-4a.pdf</a></li><li><a href="ficheros/028-4b.jpg" target="_blank">028-4b.jpg</a></li><li><a href="ficheros/028-4b.pdf" target="_blank">028-4b.pdf</a></li><li><a href="ficheros/028-5a.pdf" target="_blank">028-5a.pdf</a></li><li><a href="ficheros/028-5b.pdf" target="_blank">028-5b.pdf</a></li><li><a href="ficheros/028-6a.pdf" target="_blank">028-6a.pdf</a></li><li><a href="ficheros/028-6b.pdf" target="_blank">028-6b.pdf</a></li><li><a href="ficheros/028-7a.pdf" target="_blank">028-7a.pdf</a></li><li><a href="ficheros/028-7b.pdf" target="_blank">028-7b.pdf</a></li><li><a href="ficheros/028-8a.pdf" target="_blank">028-8a.pdf</a></li><li><a href="ficheros/028-8b.pdf" target="_blank">028-8b.pdf</a></li><li><a href="ficheros/028pr.jpg" target="_blank">028pr.jpg</a></li><li><a href="ficheros/029-4a.jpg" target="_blank">029-4a.jpg</a></li><li><a href="ficheros/029-4a.pdf" target="_blank">029-4a.pdf</a></li><li><a href="ficheros/029-5a.jpg" target="_blank">029-5a.jpg</a></li><li><a href="ficheros/029-6a.jpg" target="_blank">029-6a.jpg</a></li><li><a href="ficheros/029-6a.pdf" target="_blank">029-6a.pdf</a></li><li><a href="ficheros/029-7a.jpg" target="_blank">029-7a.jpg</a></li><li><a href="ficheros/029-8a.jpg" target="_blank">029-8a.jpg</a></li><li><a href="ficheros/029-8a.pdf" target="_blank">029-8a.pdf</a></li><li><a href="ficheros/029-8a1.jpg" target="_blank">029-8a1.jpg</a></li><li><a href="ficheros/031-4b.jpg" target="_blank">031-4b.jpg</a></li><li><a href="ficheros/031-4b.pdf" target="_blank">031-4b.pdf</a></li><li><a href="ficheros/031-4b1.jpg" target="_blank">031-4b1.jpg</a></li><li><a href="ficheros/031-7a.jpg" target="_blank">031-7a.jpg</a></li><li><a href="ficheros/031-7a.pdf" target="_blank">031-7a.pdf</a></li><li><a href="ficheros/031-7b.jpg" target="_blank">031-7b.jpg</a></li><li><a href="ficheros/031-7b.pdf" target="_blank">031-7b.pdf</a></li><li><a href="ficheros/031pr.jpg" target="_blank">031pr.jpg</a></li><li><a href="ficheros/031s.jpg" target="_blank">031s.jpg</a></li><li><a href="ficheros/031s1.jpg" target="_blank">031s1.jpg</a></li><li><a href="ficheros/031s2.jpg" target="_blank">031s2.jpg</a></li><li><a href="ficheros/031spex.jpg" target="_blank">031spex.jpg</a></li><li><a href="ficheros/032-4a.jpg" target="_blank">032-4a.jpg</a></li><li><a href="ficheros/032-4a.pdf" target="_blank">032-4a.pdf</a></li><li><a href="ficheros/032-5a.jpg" target="_blank">032-5a.jpg</a></li><li><a href="ficheros/032-5a.pdf" target="_blank">032-5a.pdf</a></li><li><a href="ficheros/032-6a.jpg" target="_blank">032-6a.jpg</a></li><li><a href="ficheros/032-6a.pdf" target="_blank">032-6a.pdf</a></li><li><a href="ficheros/032-7a.jpg" target="_blank">032-7a.jpg</a></li><li><a href="ficheros/032-7a.pdf" target="_blank">032-7a.pdf</a></li><li><a href="ficheros/032-8a.jpg" target="_blank">032-8a.jpg</a></li><li><a href="ficheros/032-8a.pdf" target="_blank">032-8a.pdf</a></li><li><a href="ficheros/032pra2.jpg" target="_blank">032pra2.jpg</a></li><li><a href="ficheros/033-4b.jpg" target="_blank">033-4b.jpg</a></li><li><a href="ficheros/033-4b.pdf" target="_blank">033-4b.pdf</a></li><li><a href="ficheros/033pa.jpg" target="_blank">033pa.jpg</a></li><li><a href="ficheros/033pex.jpg" target="_blank">033pex.jpg</a></li><li><a href="ficheros/033s.jpg" target="_blank">033s.jpg</a></li><li><a href="ficheros/034pr.jpg" target="_blank">034pr.jpg</a></li><li><a href="ficheros/035-4b.jpg" target="_blank">035-4b.jpg</a></li><li><a href="ficheros/035-4b.pdf" target="_blank">035-4b.pdf</a></li></ul>
+    <p><strong>No reconocidos automáticamente:</strong><br>24-4ab.pdf</p>
+  </div>
+</div>
+
+</body>
+</html>

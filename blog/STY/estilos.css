@@ -30,11 +30,14 @@
         padding: 0;
         box-sizing: border-box;
     }
-    .wrap{
+    .wrap1{
       max-width: 900px;
       margin: 0 auto;
       padding: 56px 18px 80px;
     }
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px 98px}
+
 
     body {
       /*

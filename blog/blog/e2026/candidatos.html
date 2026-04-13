@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planchas Presidenciales Inscritas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .source-note {
+            text-align: right;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+            font-size: 0.9em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        thead {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #e1e1e1;
+            transition: background-color 0.2s;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr:hover {
+            background-color: #e8f4fc;
+        }
+
+        td {
+            padding: 14px 15px;
+            vertical-align: top;
+        }
+
+        .partido-col {
+            font-weight: 600;
+            color: #2c3e50;
+            min-width: 180px;
+        }
+
+        .candidato-col {
+            min-width: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.9em;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 10px;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            tbody tr:nth-child(even) {
+                background-color: #f0f0f0;
+            }
+        }
+
+        .total-registros {
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Planchas Presidenciales Inscritas</h1>
+        <div class="source-note">Diario El Comercio. Todos los derechos reservados.</div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="partido-col">Partido</th>
+                    <th class="candidato-col">Presidente</th>
+                    <th class="candidato-col">Vicepresidente 1</th>
+                    <th class="candidato-col">Vicepresidente 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="partido-col">Renovación Popular</td>
+                    <td>Rafael López Aliaga</td>
+                    <td>Norma Yarrow</td>
+                    <td>Jhon Iván Ramos Malpica</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Fuerza Popular</td>
+                    <td>Keiko Fujimori</td>
+                    <td>Luis Galarreta</td>
+                    <td>Miguel Torres</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Alianza para el Progreso</td>
+                    <td>César Acuña</td>
+                    <td>Jessica Tumi Rivas</td>
+                    <td>Alejandro Soto Reyes</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido del Buen Gobierno</td>
+                    <td>Jorge Nieto Montesinos</td>
+                    <td>Susana Matute Charún</td>
+                    <td>Carlos Caballero León</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Un Camino Diferente</td>
+                    <td>Rosario Fernández Bazán</td>
+                    <td>Arturo Fernández Bazán</td>
+                    <td>Carlos Danilo Pinillos Vinces</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido Patriótico del Perú</td>
+                    <td>Herbert Caller</td>
+                    <td>Rossana Montes Tello</td>
+                    <td>Jorge Carcovich Cortelezzi</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Ahora Nación</td>
+                    <td>Alfonso López Chau</td>
+                    <td>Luis Alberto Villanueva Carbajal</td>
+                    <td>Ruth Buendía Mestoquiari</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Podemos Perú</td>
+                    <td>José Luna Gálvez</td>
+                    <td>Cecilia García Rodríguez</td>
+                    <td>Raúl Noblecilla Olaechea</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Juntos por el Perú</td>
+                    <td>Roberto Sánchez Palomino</td>
+                    <td>Analí Márquez Huanca</td>
+                    <td>Brígida Curo Bustincio</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Perú Moderno</td>
+                    <td>Carlos Jaico Carranza</td>
+                    <td>Miguel Elías Almenara Huayta</td>
+                    <td>Liz Quispe Santos</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Frente de la Esperanza 2021</td>
+                    <td>Fernando Olivera</td>
+                    <td>Elizabeth León Chinchay</td>
+                    <td>Carlos Cuaresma Sánchez</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido Demócrata Unido Perú</td>
+                    <td>Charlie Carrasco</td>
+                    <td>María Edith Paredes Verdy</td>
+                    <td>Wilbert Segovia Quin</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Progresemos</td>
+                    <td>Paul Jaimes Blanco</td>
+                    <td>Mónica Guillén Tuanama</td>
+                    <td>Jorge Caloggero Encina</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido Morado</td>
+                    <td>Mesías Guevara</td>
+                    <td>Heber Cueva Escobedo</td>
+                    <td>Marisol Liñán Solís</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Fe en el Perú</td>
+                    <td>Álvaro Paz de la Barra</td>
+                    <td>Yessika Aliaga Narváez</td>
+                    <td>Shellah Palacios Rodríguez</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Somos Perú</td>
+                    <td>George Forsyth</td>
+                    <td>Johanna Lozada Baldwin</td>
+                    <td>Herbe Olave Ugarte</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">País Para Todos</td>
+                    <td>Carlos Álvarez</td>
+                    <td>María Chambizea Reyes</td>
+                    <td>Diego Guevara Vivanco</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Perú Acción</td>
+                    <td>Francisco Diez-Canseco</td>
+                    <td>Roberto Koster Jáuregui</td>
+                    <td>Clara Quispe Torres</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Integridad Democrática</td>
+                    <td>Wolfgang Grozo</td>
+                    <td>Bertha Azabache Miranda</td>
+                    <td>Wellington Prada Chipayo</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido Cívico Obras</td>
+                    <td>Ricardo Belmont</td>
+                    <td>Daniel Barragán Coloma</td>
+                    <td>Dina Irene Hancco Hancco</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido de los Trabajadores y Emprendedores (PTE-Perú)</td>
+                    <td>Napoleón Becerra</td>
+                    <td>Winston Huamán Henríquez</td>
+                    <td>Nélida Cuayla Cuayla</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Alianza Electoral Venceremos</td>
+                    <td>Ronald Atencio</td>
+                    <td>Elena Rivera Huamán</td>
+                    <td>Alberto Quintanilla Chacón</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Cooperación Popular</td>
+                    <td>Yonhy Lescano</td>
+                    <td>Carmela Salazar Jáuregui</td>
+                    <td>Vanessa Rubith Lazo Valles</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido Demócrata Federal</td>
+                    <td>Armando Massé</td>
+                    <td>Virgilio Acuña Peralta</td>
+                    <td>Lydia Lourdes Díaz Pablo</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido Aprista</td>
+                    <td>Enrique Valderrama</td>
+                    <td>María Valdivia Acuña</td>
+                    <td>Lucio Vásquez Sánchez</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido Demócrata Verde</td>
+                    <td>Alex Gonzales</td>
+                    <td>Maritza del Carmen Rosario Milagros Sánchez Perales</td>
+                    <td>Félix Murazzo Carrillo</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Alianza Unidad Nacional</td>
+                    <td>Roberto Chiabra</td>
+                    <td>Javier Bedoya Denegri</td>
+                    <td>Neldy Mendoza Flores</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Libertad Popular</td>
+                    <td>Rafael Belaunde Llosa</td>
+                    <td>Pedro Cateriano Bellido</td>
+                    <td>Tania Porles Bazalar</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">SíCreo</td>
+                    <td>Carlos Espá</td>
+                    <td>Alejandro Agustín Santa María Silva</td>
+                    <td>Melitza Yanzich Villagarcia</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Salvemos al Perú</td>
+                    <td>Antonio Ortiz Villano</td>
+                    <td>Jaime José Freundt López</td>
+                    <td>Giovanna Demurtas Moya</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Fuerza y Libertad</td>
+                    <td>Fiorella Molinelli</td>
+                    <td>Gilbert Violeta López</td>
+                    <td>María Luz Pariona Oré</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Perú Libre</td>
+                    <td>Vladimir Cerrón</td>
+                    <td>Flavio Cruz Mamani</td>
+                    <td>Bertha Rojas López</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Partido Político PRIN</td>
+                    <td>Walter Chirinos Purizaga</td>
+                    <td>Julio Alberto Vega Ybáñez</td>
+                    <td>Mayra Lizeth Vargas Gil</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Avanza País</td>
+                    <td>José Williams</td>
+                    <td>Fernán Altuve-Febres Lores</td>
+                    <td>Adriana Tudela</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Perú Primero</td>
+                    <td>Mario Vizcarra Cornejo</td>
+                    <td>Carlos Hernán Illanes Calderón</td>
+                    <td>Judith Carla Mendoza Díaz</td>
+                </tr>
+                <tr>
+                    <td class="partido-col">Primero la Gente</td>
+                    <td>Marisol Pérez Tello</td>
+                    <td>Raúl Molina Martínez</td>
+                    <td>Manuel Ato del Avellanal Carrera</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total-registros">Total de planchas inscritas: 36</div>
+    </div>
+</body>
+</html>
